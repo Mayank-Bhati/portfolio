@@ -50,13 +50,25 @@
           <span class="date">Jun 2024 — Present</span>
         </div>
         <p class="company">Adobe · Education Platform</p>
-        <p class="tech">Event-driven microservices, Kafka, Redis</p>
+        <p class="services"><strong>Systems:</strong> Roster Manager, Sync Runner, Edu-Profile, Edu-Profile Feeder</p>
+        <p class="tech">Spring Boot, Hoolihan (Kafka-like), Redis, PostgreSQL · Clever & ClassLink LMS integrations</p>
+        <div class="architecture">
+          <p><strong>What it does:</strong> Schools use Learning Management Systems (LMS) like Clever and ClassLink. This platform syncs roster data—students, teachers, classes—from these LMS into Adobe products so educators and students can access Adobe apps with the right permissions.</p>
+          <p><strong>How the services work together:</strong></p>
+          <ul class="arch-flow">
+            <li><strong>Roster Manager</strong> — Orchestrates sync jobs, stores district config, schedules when to sync</li>
+            <li><strong>Sync Runner</strong> — Executes syncs: fetches from LMS APIs, processes data, publishes events to Hoolihan (event queue)</li>
+            <li><strong>Edu-Profile Feeder</strong> — Receives synced user data from Runner; runs diff engine (incoming vs Edu-Profile) and updates only the delta, avoiding full rewrites</li>
+            <li><strong>Edu-Profile</strong> — Central store for educator and student profiles; serves identity data to Adobe products</li>
+          </ul>
+        </div>
         <ul>
-          <li>Architected <strong>Spring Boot microservices</strong> for roster sync across <strong>6.5M+ users</strong>; event-driven pipeline with Kafka—achieving <strong>sub-second P95 latency</strong></li>
-          <li>Reduced API call volume by <strong>99%</strong>, cutting processing time by <strong>60–70%</strong></li>
-          <li>Implemented token caching; removed bottleneck for districts with <strong>50K+ users</strong></li>
-          <li>Introduced DLQ and retry patterns for Kafka; improved message durability</li>
-          <li>Owned observability for 4 services; shipped <strong>150+ fixes</strong></li>
+          <li><strong>Roster Sync:</strong> Architected batch API integration replacing 1000+ per-sync calls with 2–4 district-level calls (ClassLink, Clever); achieved <strong>99% reduction</strong> and <strong>60–70%</strong> faster processing</li>
+          <li><strong>Token caching:</strong> Implemented IMS auth caching—115+ calls → single-digit per sync; removed bottleneck for districts with <strong>50K+ users</strong></li>
+          <li><strong>Edu-Profile Feeder:</strong> Built diff engine to compare incoming Clever/ClassLink profiles with Edu-Profile state—updates only the delta (not full rewrites) since most profiles exist and only a few fields change; parallel processing for large districts</li>
+          <li><strong>Edu-Profile:</strong> Designed batch read/write/update APIs with parallel processing for high-throughput profile operations</li>
+          <li><strong>Reliability:</strong> Introduced DLQ and retry patterns for Hoolihan consumers; improved message durability and reduced data-loss incidents</li>
+          <li><strong>Observability:</strong> Owned Splunk dashboards, Slack alerting, health endpoints across all 4 services; shipped <strong>150+ fixes</strong> including Critical/Blocker bugs</li>
         </ul>
       </article>
 
@@ -74,30 +86,65 @@
           <li>Agile squad: code reviews, unit tests, CI/CD</li>
         </ul>
       </article>
+
+      <article class="card">
+        <div class="card-header">
+          <h3>Software Development Intern</h3>
+          <span class="date">Jan 2022 — Jun 2022</span>
+        </div>
+        <p class="company">Oracle</p>
+        <p class="tech">Spring Boot · React · REST APIs · MySQL</p>
+        <ul>
+          <li>Developed REST APIs in <strong>Spring Boot</strong> for internal applications; followed enterprise patterns for auth and error handling</li>
+          <li>Built small <strong>React</strong> frontend components; integrated with backend endpoints and assisted in end-to-end data flow</li>
+          <li>Optimized MySQL queries, reducing reporting dashboard response time from 200ms to <strong>50ms</strong></li>
+        </ul>
+      </article>
     </section>
 
     <section id="projects" class="section">
       <h2>Projects</h2>
       <article class="card">
         <div class="card-header">
-          <h3>Manch</h3>
+          <h3>Manch — AI-Powered Live Streaming Platform</h3>
           <span class="badge">Personal</span>
         </div>
-        <p class="tech">Node.js · Express · PostgreSQL · MongoDB · Redis</p>
-        <p>Real-time video streaming platform with AI-powered camera switching.</p>
-        <ul>
-          <li>Designed end-to-end architecture: microservices, service layer, repository pattern</li>
-          <li>Implemented SRT-based real-time streaming; concurrent multi-camera sessions</li>
-          <li>PostgreSQL, MongoDB, Redis; built for scalability and production reliability</li>
-        </ul>
+        <p class="tech">Node.js · Express · PostgreSQL · MongoDB · Redis · FFmpeg · SRT/RTMP · HLS · SwiftUI (iOS)</p>
+        <p class="project-one-liner">AI-driven live streaming platform that automates multi-camera switching; replaces manual production with intelligent, real-time camera selection.</p>
+        
+        <div class="project-detail">
+          <p><strong>Problem:</strong> Traditional multi-camera streaming needs skilled operators, increases complexity, and limits scalability for smaller creators (sports, weddings, interviews).</p>
+        </div>
+        <div class="project-detail">
+          <p><strong>Solution:</strong> Manch ingests multiple camera feeds, uses an AI decision engine to select the best view in real time, and outputs a single optimized stream. Supports event templates (sports, interviews) for customizable switching logic.</p>
+        </div>
+        <div class="project-detail">
+          <p><strong>Architecture:</strong></p>
+          <ul class="arch-flow">
+            <li><strong>Ingestion</strong> — Accepts multiple RTMP/SRT camera streams</li>
+            <li><strong>Processing</strong> — FFmpeg and media services to normalize and buffer streams</li>
+            <li><strong>AI Decision Engine</strong> — Selects best camera based on motion, audio, and templates</li>
+            <li><strong>Delivery</strong> — HLS/DASH via CDN for scalable playback</li>
+            <li><strong>Control Plane</strong> — Dashboard for templates, streams, and configs</li>
+          </ul>
+        </div>
+        <div class="project-detail">
+          <p><strong>Mobile (manch-ios):</strong> SwiftUI + AVFoundation app using HaishinKit (RTMP); one-tap streaming, connects to backend ingest pipeline as a mobile camera node.</p>
+        </div>
+        <div class="project-detail">
+          <p><strong>Features:</strong> Multi-camera ingestion · AI-based auto switching · Low latency (~2–5s) · Cloud architecture · iOS broadcasting · Template-driven logic (sports, events)</p>
+        </div>
+        <div class="project-detail">
+          <p><strong>Technical:</strong> Microservices with clear separation of ingest, processing, AI, and delivery; CAP trade-offs for latency vs availability; integrated real-time media with AI inference pipelines.</p>
+        </div>
       </article>
     </section>
 
     <section id="skills" class="section">
       <h2>Technical Skills</h2>
       <div class="skills-grid">
-        <div class="skill-cat"><strong>Core</strong> Java, Spring Boot, JavaScript, Node.js, Microservices, REST APIs</div>
-        <div class="skill-cat"><strong>Distributed</strong> Kafka, Event-Driven Architecture, Message Queues, DLQ</div>
+        <div class="skill-cat"><strong>Core</strong> Java, Spring Boot, JavaScript, Node.js, React, Microservices, REST APIs</div>
+        <div class="skill-cat"><strong>Distributed</strong> Kafka, Hoolihan, Event-Driven Architecture, Message Queues, DLQ</div>
         <div class="skill-cat"><strong>Data</strong> PostgreSQL, MySQL, MongoDB, Redis</div>
         <div class="skill-cat"><strong>Cloud & DevOps</strong> AWS, Docker, Kubernetes, Jenkins, CI/CD</div>
         <div class="skill-cat"><strong>Observability</strong> Splunk, Grafana, Alerting</div>
@@ -119,5 +166,6 @@
   <footer>
     <p>© 2025 Mayank Bhati</p>
   </footer>
+  <script src="script.js"></script>
 </body>
 </html>
