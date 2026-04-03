@@ -85,6 +85,9 @@
     }
   }
 
+  const isMobile = window.matchMedia('(pointer: coarse)').matches;
+  const isSmallScreen = window.innerWidth < 600;
+
   /* ================================================
      NAMASTE INTRO ANIMATION
      ================================================ */
@@ -94,10 +97,10 @@
 
     const introCanvas = document.getElementById('intro-particles');
     const introField = new ParticleField(introCanvas, {
-      count: 50,
+      count: isMobile ? 20 : 50,
       maxSize: 1.5,
       speed: 0.3,
-      connectDist: 100,
+      connectDist: isMobile ? 80 : 100,
     });
     introField.start();
 
@@ -143,9 +146,8 @@
 
     tl.to({}, { duration: 1.2 });
 
-    overlay.addEventListener('click', () => {
-      tl.progress(1);
-    }, { once: true });
+    overlay.addEventListener('click', () => { tl.progress(1); }, { once: true });
+    overlay.addEventListener('touchend', () => { tl.progress(1); }, { once: true });
   }
 
   function exitIntro(overlay, introField) {
@@ -183,10 +185,10 @@
     const canvas = document.getElementById('bg-particles');
     if (!canvas) return;
     const field = new ParticleField(canvas, {
-      count: 40,
-      maxSize: 1.2,
+      count: isMobile ? 15 : 40,
+      maxSize: isMobile ? 1 : 1.2,
       speed: 0.2,
-      connectDist: 140,
+      connectDist: isMobile ? 90 : 140,
       color: 'rgba(34, 211, 238, ',
     });
     field.start();
