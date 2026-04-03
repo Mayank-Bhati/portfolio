@@ -7,65 +7,130 @@
   <meta name="description" content="Backend Engineer specializing in distributed systems, Java/Spring Boot, and high-scale microservices. Open to EU relocation.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=DM+Sans:opsz,wght@9..40,400;9..40,500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <nav class="nav">
-    <a href="#about">About</a>
-    <a href="#experience">Experience</a>
-    <a href="#projects">Projects</a>
-    <a href="#skills">Skills</a>
-    <a href="#contact">Contact</a>
+  <!-- ===== Namaste Intro Overlay ===== -->
+  <div id="namaste-overlay">
+    <canvas id="intro-particles"></canvas>
+    <div class="namaste-content">
+      <div class="avatar-wrap">
+        <svg class="avatar-svg" viewBox="0 0 200 300" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <defs>
+            <filter id="neon-glow">
+              <feGaussianBlur stdDeviation="3.5" result="blur"/>
+              <feMerge>
+                <feMergeNode in="blur"/>
+                <feMergeNode in="SourceGraphic"/>
+              </feMerge>
+            </filter>
+          </defs>
+          <g filter="url(#neon-glow)" stroke="#22d3ee" stroke-width="2.5">
+            <circle class="av-el" cx="100" cy="65" r="32" pathLength="1"/>
+            <path class="av-el" d="M 68 58 Q 72 28 100 22 Q 128 28 132 58" pathLength="1"/>
+            <path class="av-el" d="M 84 58 Q 90 50 96 58" pathLength="1"/>
+            <path class="av-el" d="M 104 58 Q 110 50 116 58" pathLength="1"/>
+            <path class="av-el" d="M 86 76 Q 100 88 114 76" pathLength="1"/>
+            <path class="av-el" d="M 72 115 Q 72 97 100 97 Q 128 97 128 115 L 128 190 Q 128 205 100 205 Q 72 205 72 190 Z" pathLength="1"/>
+            <path class="av-el" d="M 72 120 Q 50 148 66 168 Q 75 178 92 166 L 100 158" pathLength="1"/>
+            <path class="av-el" d="M 128 120 Q 150 148 134 168 Q 125 178 108 166 L 100 158" pathLength="1"/>
+            <path class="av-el av-hands" d="M 93 146 L 100 136 L 107 146 L 107 170 L 100 178 L 93 170 Z" fill="rgba(34,211,238,0.12)" pathLength="1"/>
+            <line class="av-el" x1="88" y1="205" x2="82" y2="258" pathLength="1"/>
+            <line class="av-el" x1="112" y1="205" x2="118" y2="258" pathLength="1"/>
+            <path class="av-el" d="M 82 258 Q 74 262 70 256" pathLength="1"/>
+            <path class="av-el" d="M 118 258 Q 126 262 130 256" pathLength="1"/>
+          </g>
+        </svg>
+      </div>
+      <h2 class="namaste-text" aria-label="Namaste!">
+        <span>N</span><span>a</span><span>m</span><span>a</span><span>s</span><span>t</span><span>e</span><span>!</span>
+      </h2>
+      <p class="namaste-sub">Welcome to my portfolio</p>
+    </div>
+    <p class="skip-hint">click anywhere to skip</p>
+  </div>
+
+  <!-- ===== Scroll Progress ===== -->
+  <div class="scroll-progress" id="scroll-progress"></div>
+
+  <!-- ===== Background Particles ===== -->
+  <canvas id="bg-particles"></canvas>
+
+  <!-- ===== Cursor Glow ===== -->
+  <div class="cursor-glow" id="cursor-glow"></div>
+
+  <!-- ===== Nav ===== -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">MB</a>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
   </nav>
 
   <main>
-    <section class="hero">
-      <h1>Mayank Bhati</h1>
-      <p class="tagline">Backend Engineer · Distributed Systems · Microservices</p>
-      <p class="sub">Building high-throughput systems @ Adobe · Open to EU relocation</p>
+    <!-- ===== Hero ===== -->
+    <section class="hero" id="hero">
+      <div class="hero-badge">
+        <span class="pulse-dot"></span>
+        Open to opportunities
+      </div>
+      <h1 class="hero-title">
+        <span class="line">Mayank</span>
+        <span class="line gradient-text">Bhati</span>
+      </h1>
+      <p class="tagline">Backend Engineer <span class="sep">&middot;</span> Distributed Systems <span class="sep">&middot;</span> Microservices</p>
+      <p class="sub">Building high-throughput systems @ Adobe <span class="sep">&middot;</span> Open to EU relocation</p>
       <div class="hero-links">
-        <a href="mailto:bhati.mayank842@gmail.com">Email</a>
-        <a href="https://linkedin.com/in/mayank-bhati-542000185" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="https://github.com/Mayank-Bhati" target="_blank" rel="noopener">GitHub</a>
+        <a href="mailto:bhati.mayank842@gmail.com" class="btn btn-primary magnetic">Get in Touch</a>
+        <a href="https://linkedin.com/in/mayank-bhati-542000185" target="_blank" rel="noopener" class="btn btn-ghost magnetic">LinkedIn</a>
+        <a href="https://github.com/Mayank-Bhati" target="_blank" rel="noopener" class="btn btn-ghost magnetic">GitHub</a>
       </div>
     </section>
 
+    <!-- ===== About ===== -->
     <section id="about" class="section">
-      <h2>About</h2>
+      <h2><span class="section-num">01</span> About</h2>
       <p>
-        Distributed systems engineer with <strong>nearly 4 years</strong> building <strong>high-throughput, event-driven microservices</strong> in <strong>Java/Spring Boot</strong>. 
-        Core expertise: <strong>Kafka</strong>-based async workflows, scalable API design, and production observability. 
-        Shipped systems serving <strong>6.5M+ users</strong> with <strong>sub-second latency</strong>. 
+        Distributed systems engineer with <strong>nearly 4 years</strong> building <strong>high-throughput, event-driven microservices</strong> in <strong>Java/Spring Boot</strong>.
+        Core expertise: <strong>Kafka</strong>-based async workflows, scalable API design, and production observability.
+        Shipped systems serving <strong>6.5M+ users</strong> with <strong>sub-second latency</strong>.
         Strong in system design, cloud infrastructure (AWS), and reliability engineering. Fast learner; contributes across the full stack when needed.
       </p>
     </section>
 
+    <!-- ===== Experience ===== -->
     <section id="experience" class="section">
-      <h2>Experience</h2>
-      
+      <h2><span class="section-num">02</span> Experience</h2>
+
       <article class="card">
         <div class="card-header">
           <h3>Member of Technical Staff 2</h3>
-          <span class="date">Jun 2024 — Present</span>
+          <span class="date">Jun 2024 &mdash; Present</span>
         </div>
-        <p class="company">Adobe · Education Platform</p>
+        <p class="company">Adobe &middot; Education Platform</p>
         <p class="services"><strong>Systems:</strong> Roster Manager, Sync Runner, Edu-Profile, Edu-Profile Feeder</p>
-        <p class="tech">Spring Boot, Hoolihan (Kafka-like), Redis, PostgreSQL · Clever & ClassLink LMS integrations</p>
+        <p class="tech">Spring Boot, Hoolihan (Kafka-like), Redis, PostgreSQL &middot; Clever &amp; ClassLink LMS integrations</p>
         <div class="architecture">
-          <p><strong>What it does:</strong> Schools use Learning Management Systems (LMS) like Clever and ClassLink. This platform syncs roster data—students, teachers, classes—from these LMS into Adobe products so educators and students can access Adobe apps with the right permissions.</p>
+          <p><strong>What it does:</strong> Schools use Learning Management Systems (LMS) like Clever and ClassLink. This platform syncs roster data&mdash;students, teachers, classes&mdash;from these LMS into Adobe products so educators and students can access Adobe apps with the right permissions.</p>
           <p><strong>How the services work together:</strong></p>
           <ul class="arch-flow">
-            <li><strong>Roster Manager</strong> — Orchestrates sync jobs, stores district config, schedules when to sync</li>
-            <li><strong>Sync Runner</strong> — Executes syncs: fetches from LMS APIs, processes data, publishes events to Hoolihan (event queue)</li>
-            <li><strong>Edu-Profile Feeder</strong> — Receives synced user data from Runner; runs diff engine (incoming vs Edu-Profile) and updates only the delta, avoiding full rewrites</li>
-            <li><strong>Edu-Profile</strong> — Central store for educator and student profiles; serves identity data to Adobe products</li>
+            <li><strong>Roster Manager</strong> &mdash; Orchestrates sync jobs, stores district config, schedules when to sync</li>
+            <li><strong>Sync Runner</strong> &mdash; Executes syncs: fetches from LMS APIs, processes data, publishes events to Hoolihan (event queue)</li>
+            <li><strong>Edu-Profile Feeder</strong> &mdash; Receives synced user data from Runner; runs diff engine (incoming vs Edu-Profile) and updates only the delta, avoiding full rewrites</li>
+            <li><strong>Edu-Profile</strong> &mdash; Central store for educator and student profiles; serves identity data to Adobe products</li>
           </ul>
         </div>
         <ul>
-          <li><strong>Roster Sync:</strong> Architected batch API integration replacing 1000+ per-sync calls with 2–4 district-level calls (ClassLink, Clever); achieved <strong>99% reduction</strong> and <strong>60–70%</strong> faster processing</li>
-          <li><strong>Token caching:</strong> Implemented IMS auth caching—115+ calls → single-digit per sync; removed bottleneck for districts with <strong>50K+ users</strong></li>
-          <li><strong>Edu-Profile Feeder:</strong> Built diff engine to compare incoming Clever/ClassLink profiles with Edu-Profile state—updates only the delta (not full rewrites) since most profiles exist and only a few fields change; parallel processing for large districts</li>
+          <li><strong>Roster Sync:</strong> Architected batch API integration replacing 1000+ per-sync calls with 2&ndash;4 district-level calls (ClassLink, Clever); achieved <strong>99% reduction</strong> and <strong>60&ndash;70%</strong> faster processing</li>
+          <li><strong>Token caching:</strong> Implemented IMS auth caching&mdash;115+ calls &rarr; single-digit per sync; removed bottleneck for districts with <strong>50K+ users</strong></li>
+          <li><strong>Edu-Profile Feeder:</strong> Built diff engine to compare incoming Clever/ClassLink profiles with Edu-Profile state&mdash;updates only the delta (not full rewrites) since most profiles exist and only a few fields change; parallel processing for large districts</li>
           <li><strong>Edu-Profile:</strong> Designed batch read/write/update APIs with parallel processing for high-throughput profile operations</li>
           <li><strong>Reliability:</strong> Introduced DLQ and retry patterns for Hoolihan consumers; improved message durability and reduced data-loss incidents</li>
           <li><strong>Observability:</strong> Owned Splunk dashboards, Slack alerting, health endpoints across all 4 services; shipped <strong>150+ fixes</strong> including Critical/Blocker bugs</li>
@@ -75,13 +140,13 @@
       <article class="card">
         <div class="card-header">
           <h3>Software Development Engineer</h3>
-          <span class="date">Jul 2022 — Jun 2024</span>
+          <span class="date">Jul 2022 &mdash; Jun 2024</span>
         </div>
         <p class="company">Samsung</p>
-        <p class="tech">E-commerce Backend · REST APIs · High-traffic</p>
+        <p class="tech">E-commerce Backend &middot; REST APIs &middot; High-traffic</p>
         <ul>
           <li>Shipped backend services and REST APIs for <strong>samsung.com/in</strong></li>
-          <li>Improved API latency by <strong>15–25%</strong> via query tuning and removal of N+1 patterns</li>
+          <li>Improved API latency by <strong>15&ndash;25%</strong> via query tuning and removal of N+1 patterns</li>
           <li>Resolved P1/P2 production incidents; reduced repeat failures</li>
           <li>Agile squad: code reviews, unit tests, CI/CD</li>
         </ul>
@@ -90,10 +155,10 @@
       <article class="card">
         <div class="card-header">
           <h3>Software Development Intern</h3>
-          <span class="date">Jan 2022 — Jun 2022</span>
+          <span class="date">Jan 2022 &mdash; Jun 2022</span>
         </div>
         <p class="company">Oracle</p>
-        <p class="tech">Spring Boot · React · REST APIs · MySQL</p>
+        <p class="tech">Spring Boot &middot; React &middot; REST APIs &middot; MySQL</p>
         <ul>
           <li>Developed REST APIs in <strong>Spring Boot</strong> for internal applications; followed enterprise patterns for auth and error handling</li>
           <li>Built small <strong>React</strong> frontend components; integrated with backend endpoints and assisted in end-to-end data flow</li>
@@ -102,16 +167,17 @@
       </article>
     </section>
 
+    <!-- ===== Projects ===== -->
     <section id="projects" class="section">
-      <h2>Projects</h2>
+      <h2><span class="section-num">03</span> Projects</h2>
+
       <article class="card">
         <div class="card-header">
-          <h3>Manch — AI-Powered Live Streaming Platform</h3>
+          <h3>Manch &mdash; AI-Powered Live Streaming Platform</h3>
           <span class="badge">Personal</span>
         </div>
-        <p class="tech">Node.js · Express · PostgreSQL · MongoDB · Redis · FFmpeg · SRT/RTMP · HLS · SwiftUI (iOS)</p>
+        <p class="tech">Node.js &middot; Express &middot; PostgreSQL &middot; MongoDB &middot; Redis &middot; FFmpeg &middot; SRT/RTMP &middot; HLS &middot; SwiftUI (iOS)</p>
         <p class="project-one-liner">AI-driven live streaming platform that automates multi-camera switching; replaces manual production with intelligent, real-time camera selection.</p>
-        
         <div class="project-detail">
           <p><strong>Problem:</strong> Traditional multi-camera streaming needs skilled operators, increases complexity, and limits scalability for smaller creators (sports, weddings, interviews).</p>
         </div>
@@ -121,51 +187,131 @@
         <div class="project-detail">
           <p><strong>Architecture:</strong></p>
           <ul class="arch-flow">
-            <li><strong>Ingestion</strong> — Accepts multiple RTMP/SRT camera streams</li>
-            <li><strong>Processing</strong> — FFmpeg and media services to normalize and buffer streams</li>
-            <li><strong>AI Decision Engine</strong> — Selects best camera based on motion, audio, and templates</li>
-            <li><strong>Delivery</strong> — HLS/DASH via CDN for scalable playback</li>
-            <li><strong>Control Plane</strong> — Dashboard for templates, streams, and configs</li>
+            <li><strong>Ingestion</strong> &mdash; Accepts multiple RTMP/SRT camera streams</li>
+            <li><strong>Processing</strong> &mdash; FFmpeg and media services to normalize and buffer streams</li>
+            <li><strong>AI Decision Engine</strong> &mdash; Selects best camera based on motion, audio, and templates</li>
+            <li><strong>Delivery</strong> &mdash; HLS/DASH via CDN for scalable playback</li>
+            <li><strong>Control Plane</strong> &mdash; Dashboard for templates, streams, and configs</li>
           </ul>
         </div>
         <div class="project-detail">
           <p><strong>Mobile (manch-ios):</strong> SwiftUI + AVFoundation app using HaishinKit (RTMP); one-tap streaming, connects to backend ingest pipeline as a mobile camera node.</p>
         </div>
         <div class="project-detail">
-          <p><strong>Features:</strong> Multi-camera ingestion · AI-based auto switching · Low latency (~2–5s) · Cloud architecture · iOS broadcasting · Template-driven logic (sports, events)</p>
+          <p><strong>Features:</strong> Multi-camera ingestion &middot; AI-based auto switching &middot; Low latency (~2&ndash;5s) &middot; Cloud architecture &middot; iOS broadcasting &middot; Template-driven logic (sports, events)</p>
         </div>
         <div class="project-detail">
           <p><strong>Technical:</strong> Microservices with clear separation of ingest, processing, AI, and delivery; CAP trade-offs for latency vs availability; integrated real-time media with AI inference pipelines.</p>
         </div>
       </article>
+
+      <article class="card">
+        <div class="card-header">
+          <h3>Zorovah &mdash; Software Products Company</h3>
+          <span class="badge">Founder</span>
+        </div>
+        <p class="tech">Cloud Infrastructure &middot; India Deployment &middot; Payment Integration &middot; Full-Stack Product</p>
+        <p class="project-one-liner">Building reliable digital infrastructure for schools and institutions across India &mdash; one product at a time, built right.</p>
+        <div class="project-detail">
+          <p><strong>Problem:</strong> Indian K-12 schools rely on fragmented, unreliable software for daily operations &mdash; fee collection, admissions, attendance, and communication are often handled through disconnected tools or manual processes.</p>
+        </div>
+        <div class="project-detail">
+          <p><strong>Solution:</strong> Zorovah Schools &mdash; a complete operational platform designed for sustainability, not subscription traps. Covers the full school ops lifecycle in a single, easy-to-use system.</p>
+        </div>
+        <div class="project-detail">
+          <p><strong>Capabilities:</strong></p>
+          <ul class="arch-flow">
+            <li><strong>Fee Collection</strong> &mdash; Payment tracking and reconciliation for school fees</li>
+            <li><strong>Records Management</strong> &mdash; Student and staff records with admissions workflow automation</li>
+            <li><strong>Communication</strong> &mdash; Parent communication tools integrated into the platform</li>
+            <li><strong>Academics</strong> &mdash; Attendance and academic records management</li>
+            <li><strong>Analytics</strong> &mdash; Detailed reporting and analytics dashboards</li>
+          </ul>
+        </div>
+        <div class="project-detail">
+          <p><strong>Technical:</strong> Cloud-deployed (India region); designed for reliability and security from day one. Built with a deliberate, no-bloat approach &mdash; shipping when ready, not before.</p>
+        </div>
+        <div class="project-detail">
+          <p><a href="https://www.zorovah.com/products/" target="_blank" rel="noopener" class="project-link">zorovah.com/products &rarr;</a></p>
+        </div>
+      </article>
     </section>
 
+    <!-- ===== Skills ===== -->
     <section id="skills" class="section">
-      <h2>Technical Skills</h2>
+      <h2><span class="section-num">04</span> Technical Skills</h2>
       <div class="skills-grid">
-        <div class="skill-cat"><strong>Core</strong> Java, Spring Boot, JavaScript, Node.js, React, Microservices, REST APIs</div>
-        <div class="skill-cat"><strong>Distributed</strong> Kafka, Hoolihan, Event-Driven Architecture, Message Queues, DLQ</div>
-        <div class="skill-cat"><strong>Data</strong> PostgreSQL, MySQL, MongoDB, Redis</div>
-        <div class="skill-cat"><strong>Cloud & DevOps</strong> AWS, Docker, Kubernetes, Jenkins, CI/CD</div>
-        <div class="skill-cat"><strong>Observability</strong> Splunk, Grafana, Alerting</div>
+        <div class="skill-cat">
+          <span class="skill-label">Core</span>
+          <div class="skill-pills">
+            <span class="pill">Java</span>
+            <span class="pill">Spring Boot</span>
+            <span class="pill">JavaScript</span>
+            <span class="pill">Node.js</span>
+            <span class="pill">React</span>
+            <span class="pill">Microservices</span>
+            <span class="pill">REST APIs</span>
+          </div>
+        </div>
+        <div class="skill-cat">
+          <span class="skill-label">Distributed</span>
+          <div class="skill-pills">
+            <span class="pill">Kafka</span>
+            <span class="pill">Hoolihan</span>
+            <span class="pill">Event-Driven Architecture</span>
+            <span class="pill">Message Queues</span>
+            <span class="pill">DLQ</span>
+          </div>
+        </div>
+        <div class="skill-cat">
+          <span class="skill-label">Data</span>
+          <div class="skill-pills">
+            <span class="pill">PostgreSQL</span>
+            <span class="pill">MySQL</span>
+            <span class="pill">MongoDB</span>
+            <span class="pill">Redis</span>
+          </div>
+        </div>
+        <div class="skill-cat">
+          <span class="skill-label">Cloud & DevOps</span>
+          <div class="skill-pills">
+            <span class="pill">AWS</span>
+            <span class="pill">Docker</span>
+            <span class="pill">Kubernetes</span>
+            <span class="pill">Jenkins</span>
+            <span class="pill">CI/CD</span>
+          </div>
+        </div>
+        <div class="skill-cat">
+          <span class="skill-label">Observability</span>
+          <div class="skill-pills">
+            <span class="pill">Splunk</span>
+            <span class="pill">Grafana</span>
+            <span class="pill">Alerting</span>
+          </div>
+        </div>
       </div>
     </section>
 
+    <!-- ===== Contact ===== -->
     <section id="contact" class="section contact">
-      <h2>Contact</h2>
-      <p>Open to opportunities in backend engineering, distributed systems, and platform roles.</p>
-      <p><strong>Eligible for visa sponsorship</strong> · Based in Noida, India</p>
+      <h2><span class="section-num">05</span> Contact</h2>
+      <p class="contact-intro">Open to opportunities in backend engineering, distributed systems, and platform roles.</p>
+      <p><strong>Eligible for visa sponsorship</strong> &middot; Based in Noida, India</p>
       <div class="contact-links">
-        <a href="mailto:bhati.mayank842@gmail.com">bhati.mayank842@gmail.com</a>
-        <a href="https://linkedin.com/in/mayank-bhati-542000185" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="https://github.com/Mayank-Bhati" target="_blank" rel="noopener">GitHub</a>
+        <a href="mailto:bhati.mayank842@gmail.com" class="btn btn-primary magnetic">bhati.mayank842@gmail.com</a>
+        <a href="https://linkedin.com/in/mayank-bhati-542000185" target="_blank" rel="noopener" class="btn btn-ghost magnetic">LinkedIn</a>
+        <a href="https://github.com/Mayank-Bhati" target="_blank" rel="noopener" class="btn btn-ghost magnetic">GitHub</a>
       </div>
     </section>
   </main>
 
   <footer>
-    <p>© 2025 Mayank Bhati</p>
+    <p>&copy; 2025 Mayank Bhati</p>
   </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
