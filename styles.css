@@ -287,6 +287,15 @@ main {
   padding: 2rem 0;
 }
 
+.hero-badge,
+.hero-title .line,
+.hero .tagline,
+.hero .sub,
+.hero-links {
+  opacity: 0;
+  transform: translateY(25px);
+}
+
 .hero-badge {
   display: inline-flex;
   align-items: center;

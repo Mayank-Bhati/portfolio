@@ -282,9 +282,9 @@
 
     const heroEls = ['.hero-badge', '.hero-title .line', '.tagline', '.sub', '.hero-links'];
     heroEls.forEach((sel, i) => {
-      gsap.from(sel, {
-        opacity: 0,
-        y: 25,
+      gsap.to(sel, {
+        opacity: 1,
+        y: 0,
         duration: 0.7,
         delay: i * 0.12,
         ease: 'power3.out',
