@@ -1,337 +1,273 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mayank Bhati | Software Engineer</title>
-  <meta name="description" content="Software Engineer with deep backend expertise in distributed systems, Java/Spring Boot, and high-scale microservices. Full-stack capable. Open to relocation.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=DM+Sans:opsz,wght@9..40,400;9..40,500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Mayank Bhati — Full-Stack Engineer with deep backend expertise in event-driven distributed systems. Java/Spring Boot, Kafka. Built roster sync for 6.5M+ users at Adobe. Open to EU relocation." />
+<meta property="og:title" content="Mayank Bhati · Distributed Systems Engineer" />
+<meta property="og:description" content="I build event-driven systems that stay correct and fast under real production load." />
+<meta property="og:type" content="website" />
+<title>Mayank Bhati · Distributed Systems Engineer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/style.css" />
 </head>
 <body>
-  <!-- ===== Namaste Intro Overlay ===== -->
-  <div id="namaste-overlay">
-    <canvas id="intro-particles"></canvas>
-    <div class="namaste-content">
-      <div class="avatar-wrap">
-        <svg class="avatar-svg" viewBox="0 0 200 300" fill="none" stroke-linecap="round" stroke-linejoin="round">
-          <defs>
-            <filter id="neon-glow">
-              <feGaussianBlur stdDeviation="3.5" result="blur"/>
-              <feMerge>
-                <feMergeNode in="blur"/>
-                <feMergeNode in="SourceGraphic"/>
-              </feMerge>
-            </filter>
-          </defs>
-          <g filter="url(#neon-glow)" stroke="#22d3ee" stroke-width="2.5">
-            <circle class="av-el" cx="100" cy="65" r="32" pathLength="1"/>
-            <path class="av-el" d="M 68 58 Q 72 28 100 22 Q 128 28 132 58" pathLength="1"/>
-            <path class="av-el" d="M 84 58 Q 90 50 96 58" pathLength="1"/>
-            <path class="av-el" d="M 104 58 Q 110 50 116 58" pathLength="1"/>
-            <path class="av-el" d="M 86 76 Q 100 88 114 76" pathLength="1"/>
-            <path class="av-el" d="M 72 115 Q 72 97 100 97 Q 128 97 128 115 L 128 190 Q 128 205 100 205 Q 72 205 72 190 Z" pathLength="1"/>
-            <path class="av-el" d="M 72 120 Q 50 148 66 168 Q 75 178 92 166 L 100 158" pathLength="1"/>
-            <path class="av-el" d="M 128 120 Q 150 148 134 168 Q 125 178 108 166 L 100 158" pathLength="1"/>
-            <path class="av-el av-hands" d="M 93 146 L 100 136 L 107 146 L 107 170 L 100 178 L 93 170 Z" fill="rgba(34,211,238,0.12)" pathLength="1"/>
-            <line class="av-el" x1="88" y1="205" x2="82" y2="258" pathLength="1"/>
-            <line class="av-el" x1="112" y1="205" x2="118" y2="258" pathLength="1"/>
-            <path class="av-el" d="M 82 258 Q 74 262 70 256" pathLength="1"/>
-            <path class="av-el" d="M 118 258 Q 126 262 130 256" pathLength="1"/>
-          </g>
-        </svg>
-      </div>
-      <h2 class="namaste-text" aria-label="Namaste!">
-        <span>N</span><span>a</span><span>m</span><span>a</span><span>s</span><span>t</span><span>e</span><span>!</span>
-      </h2>
-      <p class="namaste-sub">Welcome to my portfolio</p>
+
+<!-- Boot intro -->
+<div id="intro">
+  <div class="boot" id="boot"></div>
+  <div class="skip">click anywhere to enter</div>
+</div>
+
+<nav id="nav">
+  <div class="nav-inner">
+    <a href="#top" class="logo"><span class="dot"></span>mayank.bhati</a>
+    <div class="nav-links">
+      <a href="#about" class="link-underline">about</a>
+      <a href="#experience" class="link-underline">experience</a>
+      <a href="#projects" class="link-underline">projects</a>
+      <a href="#skills" class="link-underline">skills</a>
+      <a href="#contact" class="nav-cta">get in touch</a>
     </div>
-    <p class="skip-hint">click anywhere to skip</p>
   </div>
+</nav>
 
-  <!-- ===== Scroll Progress ===== -->
-  <div class="scroll-progress" id="scroll-progress"></div>
+<div class="wrap" id="top">
 
-  <!-- ===== Background Particles ===== -->
-  <canvas id="bg-particles"></canvas>
-
-  <!-- ===== Cursor Glow ===== -->
-  <div class="cursor-glow" id="cursor-glow"></div>
-
-  <!-- ===== Nav ===== -->
-  <nav class="nav" id="nav">
-    <div class="nav-inner">
-      <a href="#hero" class="nav-logo">MB</a>
-      <div class="nav-links">
-        <a href="#about">About</a>
-        <a href="#experience">Experience</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero-left">
+      <div class="status"><span class="live"></span>Open to opportunities · EU relocation · Blue Card eligible</div>
+      <h1 class="name">Mayank <span class="grad">Bhati</span></h1>
+      <div class="role"><b>Full-Stack Engineer</b> · deep backend expertise · <b>distributed systems</b></div>
+      <p class="tag">I build <b>event-driven systems</b> that stay correct and fast under real production load — from Kafka pipelines to the UI on top.</p>
+      <div class="hero-cta">
+        <a href="#projects" class="btn btn-primary">View work →</a>
+        <a href="mailto:bhati.mayank842@gmail.com" class="btn btn-ghost">Get in touch</a>
+        <a href="https://github.com/mayank-bhati" target="_blank" rel="noopener" class="btn btn-ghost">GitHub</a>
       </div>
     </div>
-  </nav>
 
-  <main>
-    <!-- ===== Hero ===== -->
-    <section class="hero" id="hero">
-      <div class="hero-badge">
-        <span class="pulse-dot"></span>
-        Open to opportunities
+    <!-- SIGNATURE: generative distributed-system network -->
+    <div class="signature">
+      <span class="sig-label">// from chaos, order</span>
+      <canvas id="netcanvas"></canvas>
+      <div class="credo" id="credo"></div>
+    </div>
+
+    <div class="metrics reveal">
+      <div class="metric"><div class="n">6.5M+</div><div class="l">users served</div></div>
+      <div class="metric"><div class="n">~85%</div><div class="l">sync time cut</div></div>
+      <div class="metric"><div class="n">99.99%</div><div class="l">fewer API calls</div></div>
+      <div class="metric"><div class="n">4+ yrs</div><div class="l">in production</div></div>
+    </div>
+  </header>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="eyebrow reveal">01 · about</div>
+    <h2 class="sec reveal">Systems thinker, first-principles builder.</h2>
+    <div class="about-grid">
+      <div class="about-body reveal">
+        <p>I'm a <b>full-stack engineer with deep backend expertise</b> and <span class="hl">4+ years</span> building high-throughput, event-driven microservices in 24/7 production — across consumer commerce and education platforms.</p>
+        <p>My core strength is reasoning about systems from <b>first principles</b>: concurrency, caching and invalidation, idempotency, backpressure, and resilience. At Adobe I own a <b>4-service Kafka-driven roster-sync pipeline</b> serving <span class="hl">6.5M+ K-12 users</span>; I've cut worst-case sync time by ~85% and eliminated throttling by redesigning the data flow, not by throwing hardware at it.</p>
+        <p>I care about engineering that quietly makes things better for real people — the pipeline that keeps 6.5 million students' classrooms in sync is invisible when it works, and that's the point. I also ship across the stack in <b>React / Next.js</b>, owning features end-to-end from schema to UI.</p>
       </div>
-      <h1 class="hero-title">
-        <span class="line">Mayank</span>
-        <span class="line gradient-text">Bhati</span>
-      </h1>
-      <p class="tagline">Software Engineer <span class="sep">&middot;</span> Backend &amp; Distributed Systems <span class="sep">&middot;</span> Full Product Lifecycle</p>
-      <p class="sub">Building high-throughput systems @ Adobe <span class="sep">&middot;</span> Open to relocation</p>
-      <div class="hero-links">
-        <a href="mailto:bhati.mayank842@gmail.com" class="btn btn-primary magnetic">Get in Touch</a>
-        <a href="https://linkedin.com/in/mayank-bhati-542000185" target="_blank" rel="noopener" class="btn btn-ghost magnetic">LinkedIn</a>
-        <a href="https://github.com/Mayank-Bhati" target="_blank" rel="noopener" class="btn btn-ghost magnetic">GitHub</a>
-      </div>
-    </section>
-
-    <!-- ===== About ===== -->
-    <section id="about" class="section">
-      <h2><span class="section-num">01</span> About</h2>
-      <p>
-        Software engineer with <strong>nearly 4 years</strong> building <strong>high-throughput, event-driven microservices</strong> in <strong>Java/Spring Boot</strong>.
-        Core strength: <strong>Kafka</strong>-based async workflows, scalable API design, and production observability.
-        Shipped systems serving <strong>6.5M+ users</strong> with <strong>sub-second latency</strong>.
-        Strong in system design, cloud infrastructure (AWS), and reliability engineering.
-      </p>
-      <p>
-        Also ships across the full stack &mdash; built <strong>React</strong> components at Oracle, and leverages <strong>AI agents</strong> (Cursor, Copilot) to move fast on frontend, mobile, and product work like Manch and Zorovah.
-        Comfortable owning features <strong>end-to-end</strong>, from database schema to user-facing UI. Backend is the forte; AI-augmented full-stack is the range.
-      </p>
-    </section>
-
-    <!-- ===== Experience ===== -->
-    <section id="experience" class="section">
-      <h2><span class="section-num">02</span> Experience</h2>
-
-      <article class="card">
-        <div class="card-header">
-          <h3>Member of Technical Staff 2</h3>
-          <span class="date">Jun 2024 &mdash; Present</span>
-        </div>
-        <p class="company">Adobe &middot; Education Platform</p>
-        <p class="services"><strong>Systems:</strong> Roster Manager, Sync Runner, Edu-Profile, Edu-Profile Feeder</p>
-        <p class="tech">Spring Boot, Hoolihan (Kafka-like), Redis, PostgreSQL &middot; Clever &amp; ClassLink LMS integrations</p>
-        <div class="architecture">
-          <p><strong>What it does:</strong> Schools use Learning Management Systems (LMS) like Clever and ClassLink. This platform syncs roster data&mdash;students, teachers, classes&mdash;from these LMS into Adobe products so educators and students can access Adobe apps with the right permissions.</p>
-          <p><strong>How the services work together:</strong></p>
-          <ul class="arch-flow">
-            <li><strong>Roster Manager</strong> &mdash; Orchestrates sync jobs, stores district config, schedules when to sync</li>
-            <li><strong>Sync Runner</strong> &mdash; Executes syncs: fetches from LMS APIs, processes data, publishes events to Hoolihan (event queue)</li>
-            <li><strong>Edu-Profile Feeder</strong> &mdash; Receives synced user data from Runner; runs diff engine (incoming vs Edu-Profile) and updates only the delta, avoiding full rewrites</li>
-            <li><strong>Edu-Profile</strong> &mdash; Central store for educator and student profiles; serves identity data to Adobe products</li>
-          </ul>
-        </div>
+      <div class="principles reveal">
+        <div class="h">// how I work</div>
         <ul>
-          <li><strong>Roster Sync:</strong> Architected batch API integration replacing 1000+ per-sync calls with 2&ndash;4 district-level calls (ClassLink, Clever); achieved <strong>99% reduction</strong> and <strong>60&ndash;70%</strong> faster processing</li>
-          <li><strong>Token caching:</strong> Implemented IMS auth caching&mdash;115+ calls &rarr; single-digit per sync; removed bottleneck for districts with <strong>50K+ users</strong></li>
-          <li><strong>Edu-Profile Feeder:</strong> Built diff engine to compare incoming Clever/ClassLink profiles with Edu-Profile state&mdash;updates only the delta (not full rewrites) since most profiles exist and only a few fields change; parallel processing for large districts</li>
-          <li><strong>Edu-Profile:</strong> Designed batch read/write/update APIs with parallel processing for high-throughput profile operations</li>
-          <li><strong>Reliability:</strong> Introduced DLQ and retry patterns for Hoolihan consumers; improved message durability and reduced data-loss incidents</li>
-          <li><strong>Observability:</strong> Owned Splunk dashboards, Slack alerting, health endpoints across all 4 services; shipped <strong>150+ fixes</strong> including Critical/Blocker bugs</li>
+          <li><span class="k">profile</span> before optimizing — measure, don't guess</li>
+          <li><span class="k">idempotent</span> by default — retries must be safe</li>
+          <li><span class="k">bounded</span> everything — pools, payloads, blast radius</li>
+          <li><span class="k">observable</span> from day one</li>
+          <li><span class="k">derive</span> from scratch — understand, don't memorize</li>
         </ul>
-      </article>
+      </div>
+    </div>
+  </section>
 
-      <article class="card">
-        <div class="card-header">
-          <h3>Software Development Engineer</h3>
-          <span class="date">Jul 2022 &mdash; Jun 2024</span>
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="eyebrow reveal">02 · experience</div>
+    <h2 class="sec reveal">Production track record.</h2>
+    <div class="timeline">
+      <div class="node reveal">
+        <div class="node-head">
+          <div><span class="node-role">Member of Technical Staff 2</span> · <span class="node-co">Adobe</span></div>
+          <div class="node-date">Jun 2024 — Present</div>
         </div>
-        <p class="company">Samsung</p>
-        <p class="tech">E-commerce Backend &middot; REST APIs &middot; High-traffic</p>
+        <div class="node-meta">Education Platform · Roster Sync · Java 17, Spring Boot, Kafka, Redis, PostgreSQL/Aurora</div>
         <ul>
-          <li>Shipped backend services and REST APIs for <strong>samsung.com/in</strong></li>
-          <li>Improved API latency by <strong>15&ndash;25%</strong> via query tuning and removal of N+1 patterns</li>
-          <li>Resolved P1/P2 production incidents; reduced repeat failures</li>
-          <li>Agile squad: code reviews, unit tests, CI/CD</li>
+          <li>Own a <b>4-service, Kafka-driven roster sync pipeline</b> keeping Adobe Admin Console consistent with Clever & ClassLink for <b>6.5M+ K-12 users</b> at 99.9%+ uptime</li>
+          <li>Cut worst-case sync on a <b>120k+ user district from ~12.5h to ~1h50m (~85%)</b> via bounded-parallel chunked async, Aurora read replicas, and JVM/GC tuning — zero extra infra spend</li>
+          <li>Replaced O(N) per-user fetches with <b>bulk /sections aggregation</b> in Redis — <b>~99.99% fewer</b> downstream API calls, killing ClassLink 429 throttling at back-to-school</li>
+          <li>Designed a <b>task-based heartbeat with atomic-claim recovery</b> that self-heals syncs after pod crashes; made cache invalidation event-driven to close a drift bug</li>
+          <li>Drove observability across all 4 services with <b>Resilience4j circuit breakers</b>; MTTD &lt; 15 min; resolved <b>150+ Critical/Blocker</b> issues</li>
         </ul>
-      </article>
-
-      <article class="card">
-        <div class="card-header">
-          <h3>Software Development Intern</h3>
-          <span class="date">Jan 2022 &mdash; Jun 2022</span>
+      </div>
+      <div class="node reveal">
+        <div class="node-head">
+          <div><span class="node-role">Software Development Engineer</span> · <span class="node-co">Samsung</span></div>
+          <div class="node-date">Jul 2022 — Jun 2024</div>
         </div>
-        <p class="company">Oracle</p>
-        <p class="tech">Spring Boot &middot; React &middot; REST APIs &middot; MySQL</p>
+        <div class="node-meta">samsung.com/in · E-commerce Backend + React Storefront · Java, Spring Boot, PostgreSQL, Kafka</div>
         <ul>
-          <li>Developed REST APIs in <strong>Spring Boot</strong> for internal applications; followed enterprise patterns for auth and error handling</li>
-          <li>Built small <strong>React</strong> frontend components; integrated with backend endpoints and assisted in end-to-end data flow</li>
-          <li>Optimized MySQL queries, reducing reporting dashboard response time from 200ms to <strong>50ms</strong></li>
+          <li>Built <b>catalogue & checkout services</b> sustaining <b>millions of daily requests</b> with order volume scaling <b>10x</b> during Galaxy launches and festive sales</li>
+          <li>Delivered <b>customer-facing storefront features on the React frontend</b> — responsive product & checkout UI in React/JavaScript, owning flows end-to-end from API contract to page</li>
+          <li>Engineered <b>surge handling</b> with bounded thread pools and Kafka load-leveling, with transparent queue-position feedback under peak load</li>
+          <li>Reduced <b>REST API latency 15–25%</b> via query-plan analysis, index tuning, N+1 elimination, and Redis caching on the hot path</li>
         </ul>
-      </article>
-    </section>
+      </div>
+      <div class="node dim reveal">
+        <div class="node-head">
+          <div><span class="node-role">Software Development Intern</span> · <span class="node-co">Oracle</span></div>
+          <div class="node-date">Jan 2022 — Jun 2022</div>
+        </div>
+        <div class="node-meta">Spring Boot · React · MySQL</div>
+        <ul>
+          <li>Built REST APIs in Spring Boot and <b>React frontend components</b> for internal apps, integrated end-to-end</li>
+          <li>Optimized MySQL queries, cutting a reporting dashboard from <b>200ms to 50ms</b></li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
-    <!-- ===== Projects ===== -->
-    <section id="projects" class="section">
-      <h2><span class="section-num">03</span> Projects</h2>
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="eyebrow reveal">03 · projects</div>
+    <h2 class="sec reveal">Things I've built end-to-end.</h2>
 
-      <article class="card">
-        <div class="card-header">
-          <h3>Manch &mdash; AI-Powered Live Streaming Platform</h3>
-          <span class="badge">Personal</span>
-        </div>
-        <p class="tech">Node.js &middot; Express &middot; PostgreSQL &middot; MongoDB &middot; Redis &middot; FFmpeg &middot; SRT/RTMP &middot; HLS &middot; SwiftUI (iOS)</p>
-        <p class="project-one-liner">AI-driven live streaming platform that automates multi-camera switching; replaces manual production with intelligent, real-time camera selection.</p>
-        <div class="project-detail">
-          <p><strong>Problem:</strong> Traditional multi-camera streaming needs skilled operators, increases complexity, and limits scalability for smaller creators (sports, weddings, interviews).</p>
-        </div>
-        <div class="project-detail">
-          <p><strong>Solution:</strong> Manch ingests multiple camera feeds, uses an AI decision engine to select the best view in real time, and outputs a single optimized stream. Supports event templates (sports, interviews) for customizable switching logic.</p>
-        </div>
-        <div class="project-detail">
-          <p><strong>Architecture:</strong></p>
-          <ul class="arch-flow">
-            <li><strong>Ingestion</strong> &mdash; Accepts multiple RTMP/SRT camera streams</li>
-            <li><strong>Processing</strong> &mdash; FFmpeg and media services to normalize and buffer streams</li>
-            <li><strong>AI Decision Engine</strong> &mdash; Selects best camera based on motion, audio, and templates</li>
-            <li><strong>Delivery</strong> &mdash; HLS/DASH via CDN for scalable playback</li>
-            <li><strong>Control Plane</strong> &mdash; Dashboard for templates, streams, and configs</li>
-          </ul>
-        </div>
-        <div class="project-detail">
-          <p><strong>Mobile (manch-ios):</strong> SwiftUI + AVFoundation app using HaishinKit (RTMP); one-tap streaming, connects to backend ingest pipeline as a mobile camera node.</p>
-        </div>
-        <div class="project-detail">
-          <p><strong>Features:</strong> Multi-camera ingestion &middot; AI-based auto switching &middot; Low latency (~2&ndash;5s) &middot; Cloud architecture &middot; iOS broadcasting &middot; Template-driven logic (sports, events)</p>
-        </div>
-        <div class="project-detail">
-          <p><strong>Technical:</strong> Microservices with clear separation of ingest, processing, AI, and delivery; CAP trade-offs for latency vs availability; integrated real-time media with AI inference pipelines.</p>
-        </div>
-      </article>
-
-      <article class="card">
-        <div class="card-header">
-          <h3>Zorovah &mdash; Software Products Company</h3>
-          <span class="badge">Founder</span>
-        </div>
-        <p class="tech">Cloud Infrastructure &middot; India Deployment &middot; Payment Integration &middot; Full-Stack Product</p>
-        <p class="project-one-liner">Building reliable digital infrastructure for schools and institutions across India &mdash; one product at a time, built right.</p>
-        <div class="project-detail">
-          <p><strong>Problem:</strong> Indian K-12 schools rely on fragmented, unreliable software for daily operations &mdash; fee collection, admissions, attendance, and communication are often handled through disconnected tools or manual processes.</p>
-        </div>
-        <div class="project-detail">
-          <p><strong>Solution:</strong> Zorovah Schools &mdash; a complete operational platform designed for sustainability, not subscription traps. Covers the full school ops lifecycle in a single, easy-to-use system.</p>
-        </div>
-        <div class="project-detail">
-          <p><strong>Capabilities:</strong></p>
-          <ul class="arch-flow">
-            <li><strong>Fee Collection</strong> &mdash; Payment tracking and reconciliation for school fees</li>
-            <li><strong>Records Management</strong> &mdash; Student and staff records with admissions workflow automation</li>
-            <li><strong>Communication</strong> &mdash; Parent communication tools integrated into the platform</li>
-            <li><strong>Academics</strong> &mdash; Attendance and academic records management</li>
-            <li><strong>Analytics</strong> &mdash; Detailed reporting and analytics dashboards</li>
-          </ul>
-        </div>
-        <div class="project-detail">
-          <p><strong>Technical:</strong> Cloud-deployed (India region); designed for reliability and security from day one. Built with a deliberate, no-bloat approach &mdash; shipping when ready, not before.</p>
-        </div>
-        <div class="project-detail">
-          <p><a href="https://www.zorovah.com/products/" target="_blank" rel="noopener" class="project-link">zorovah.com/products &rarr;</a></p>
-        </div>
-      </article>
-    </section>
-
-    <!-- ===== Skills ===== -->
-    <section id="skills" class="section">
-      <h2><span class="section-num">04</span> Technical Skills</h2>
-      <div class="skills-grid">
-        <div class="skill-cat">
-          <span class="skill-label">Backend</span>
-          <div class="skill-pills">
-            <span class="pill">Java</span>
-            <span class="pill">Spring Boot</span>
-            <span class="pill">Node.js</span>
-            <span class="pill">Microservices</span>
-            <span class="pill">REST APIs</span>
-            <span class="pill">System Design</span>
-          </div>
-        </div>
-        <div class="skill-cat">
-          <span class="skill-label">Frontend</span>
-          <div class="skill-pills">
-            <span class="pill">React</span>
-            <span class="pill">JavaScript</span>
-            <span class="pill">HTML/CSS</span>
-          </div>
-        </div>
-        <div class="skill-cat">
-          <span class="skill-label">AI-Augmented Dev</span>
-          <div class="skill-pills">
-            <span class="pill">Cursor</span>
-            <span class="pill">GitHub Copilot</span>
-            <span class="pill">AI Agents</span>
-            <span class="pill">Prompt Engineering</span>
-          </div>
-        </div>
-        <div class="skill-cat">
-          <span class="skill-label">Distributed</span>
-          <div class="skill-pills">
-            <span class="pill">Kafka</span>
-            <span class="pill">Hoolihan</span>
-            <span class="pill">Event-Driven Architecture</span>
-            <span class="pill">Message Queues</span>
-            <span class="pill">DLQ</span>
-          </div>
-        </div>
-        <div class="skill-cat">
-          <span class="skill-label">Data</span>
-          <div class="skill-pills">
-            <span class="pill">PostgreSQL</span>
-            <span class="pill">MySQL</span>
-            <span class="pill">MongoDB</span>
-            <span class="pill">Redis</span>
-          </div>
-        </div>
-        <div class="skill-cat">
-          <span class="skill-label">Cloud & DevOps</span>
-          <div class="skill-pills">
-            <span class="pill">AWS</span>
-            <span class="pill">Docker</span>
-            <span class="pill">Kubernetes</span>
-            <span class="pill">Jenkins</span>
-            <span class="pill">CI/CD</span>
-          </div>
-        </div>
-        <div class="skill-cat">
-          <span class="skill-label">Observability</span>
-          <div class="skill-pills">
-            <span class="pill">Splunk</span>
-            <span class="pill">Grafana</span>
-            <span class="pill">Alerting</span>
-          </div>
+    <!-- CareerCompass -->
+    <div class="proj reveal">
+      <div class="proj-head">
+        <div class="proj-title">Career<span class="em">Compass</span></div>
+        <div class="proj-badge">FOUNDER · LIVE</div>
+      </div>
+      <p class="proj-lead">An AI-assisted career-guidance platform that helps students discover study paths that fit who they are — then compare the real institutions behind them.</p>
+      <div class="proj-block">
+        <div class="bh">The problem</div>
+        <p>Italy has one of Europe's highest dropout rates, largely because students pick courses blindly — with no way to match their interests to paths, or to see the reality of a course before enrolling.</p>
+      </div>
+      <div class="proj-block">
+        <div class="bh">Five-stage flow</div>
+        <div class="flow">
+          <span class="stage">Express</span><span class="arr">→</span>
+          <span class="stage">Reveal</span><span class="arr">→</span>
+          <span class="stage">Discover</span><span class="arr">→</span>
+          <span class="stage">Filter</span><span class="arr">→</span>
+          <span class="stage">Compare</span>
         </div>
       </div>
-    </section>
-
-    <!-- ===== Contact ===== -->
-    <section id="contact" class="section contact">
-      <h2><span class="section-num">05</span> Contact</h2>
-      <p class="contact-intro">Open to opportunities in software engineering, distributed systems, and product engineering roles.</p>
-      <p><strong>Open to relocation</strong> &middot; Based in Noida, India</p>
-      <div class="contact-links">
-        <a href="mailto:bhati.mayank842@gmail.com" class="btn btn-primary magnetic">bhati.mayank842@gmail.com</a>
-        <a href="https://linkedin.com/in/mayank-bhati-542000185" target="_blank" rel="noopener" class="btn btn-ghost magnetic">LinkedIn</a>
-        <a href="https://github.com/Mayank-Bhati" target="_blank" rel="noopener" class="btn btn-ghost magnetic">GitHub</a>
+      <div class="proj-block">
+        <div class="bh">How it works</div>
+        <ul>
+          <li>An <b>adaptive mixed-format survey</b> (binary, multi-select, Likert) maps interests onto a <b>RIASEC</b> psychometric model — different every run via stratified randomization</li>
+          <li><b>Deterministic, fully client-side scoring engines</b> — cosine-similarity career matching plus a two-layer path/environment fit — run as pure functions</li>
+          <li><b>No backend, zero data stored</b>: privacy-clean for minors by design, free to host, fully auditable — deployed static on GitHub Pages via CI/CD</li>
+          <li>Grounded in <b>public education datasets</b> (AlmaLaurea, MUR) for real employment, satisfaction, and dropout figures</li>
+        </ul>
       </div>
-    </section>
-  </main>
+      <div class="stack">
+        <span class="chip">Next.js</span><span class="chip">React</span><span class="chip">Tailwind</span>
+        <span class="chip">Pure-function engines</span><span class="chip">RIASEC</span><span class="chip">GitHub Actions</span>
+      </div>
+      <a class="proj-link" href="https://mayank-bhati.github.io/confronta/" target="_blank" rel="noopener">Open live demo →</a>
+    </div>
 
-  <footer>
-    <p>&copy; 2025 Mayank Bhati</p>
-  </footer>
+    <!-- Manch -->
+    <div class="proj reveal">
+      <div class="proj-head">
+        <div class="proj-title"><span class="em">Manch</span> — AI Live-Streaming Platform</div>
+        <div class="proj-badge">PERSONAL · SYSTEMS</div>
+      </div>
+      <p class="proj-lead">An AI-driven multi-camera live-streaming platform that automates the job of a live production crew — ingesting several camera feeds and intelligently cutting between them in real time.</p>
+      <div class="proj-block">
+        <div class="bh">The problem</div>
+        <p>Multi-camera streaming — sports, weddings, interviews, conferences — needs a skilled human operator switching feeds live. That's expensive, doesn't scale, and puts good production out of reach for small creators.</p>
+      </div>
+      <div class="proj-block">
+        <div class="bh">Real-time media pipeline</div>
+        <div class="flow">
+          <span class="stage">Ingest · RTMP/SRT</span><span class="arr">→</span>
+          <span class="stage">Normalize · FFmpeg</span><span class="arr">→</span>
+          <span class="stage">AI Switcher</span><span class="arr">→</span>
+          <span class="stage">Encode · HLS</span><span class="arr">→</span>
+          <span class="stage">CDN</span>
+        </div>
+      </div>
+      <div class="proj-block">
+        <div class="bh">Engineering detail</div>
+        <ul>
+          <li><b>Ingestion layer</b> accepts multiple simultaneous <b>RTMP/SRT</b> camera feeds, each treated as an independent stream node the system can subscribe to</li>
+          <li><b>AI decision engine</b> scores every feed in real time on <b>motion, audio energy, and scene templates</b> (sports vs. interview logic), then picks the "best" camera — the core replacement for a human switcher</li>
+          <li><b>Processing services</b> use FFmpeg to normalize, buffer, and time-align feeds so switches are seamless despite per-camera latency and jitter</li>
+          <li><b>Delivery</b> via <b>HLS/DASH over CDN</b> for scalable playback at <b>~2–5s latency</b>, decoupling viewers from ingest load</li>
+          <li>Deliberate <b>microservice separation</b> of ingest / processing / AI / delivery, with explicit <b>CAP trade-offs</b> favoring latency over strict consistency on the live path</li>
+          <li><b>manch-ios</b>: a <b>SwiftUI + AVFoundation</b> companion app using HaishinKit for one-tap RTMP broadcasting — turns any phone into a mobile camera node</li>
+        </ul>
+      </div>
+      <div class="stack">
+        <span class="chip">Node.js</span><span class="chip">Express</span><span class="chip">FFmpeg</span>
+        <span class="chip">SRT/RTMP</span><span class="chip">HLS/DASH</span><span class="chip">Redis</span>
+        <span class="chip">PostgreSQL</span><span class="chip">MongoDB</span><span class="chip">SwiftUI · AVFoundation</span><span class="chip">HaishinKit</span>
+      </div>
+    </div>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-  <script src="script.js"></script>
+    <!-- Zorovah -->
+    <div class="proj reveal">
+      <div class="proj-head">
+        <div class="proj-title"><span class="em">Zorovah</span> — Multi-Tenant School SaaS</div>
+        <div class="proj-badge">FOUNDER</div>
+      </div>
+      <p class="proj-lead">A multi-tenant operations platform for Indian K-12 schools — fee collection, admissions, attendance, and communication in one reliable system instead of fragmented tools.</p>
+      <div class="proj-block">
+        <div class="bh">Engineering detail</div>
+        <ul>
+          <li>Multi-tenant backend with strict <b>tenant-level data isolation and RBAC</b> via scoped token validation; stateless services, connection pooling, fault-tolerant REST contracts on AWS ECS</li>
+          <li>Integrated the <b>Gemini API</b> as a clean backend service — structured JSON output, async generation, human-in-the-loop review — to auto-generate student progress reports, cutting teacher reporting time <b>~80%</b></li>
+        </ul>
+      </div>
+      <div class="stack">
+        <span class="chip">Java · Spring Boot</span><span class="chip">Multi-tenant</span><span class="chip">RBAC</span>
+        <span class="chip">Gemini API</span><span class="chip">AWS ECS · Docker</span>
+      </div>
+      <a class="proj-link" href="https://www.zorovah.com/products/" target="_blank" rel="noopener">zorovah.com →</a>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="eyebrow reveal">04 · skills</div>
+    <h2 class="sec reveal">The stack, honestly weighted.</h2>
+    <div class="skills-grid">
+      <div class="skill-card reveal"><div class="sh">Backend & languages</div><div class="skill-list"><span>Java 17/21</span><span>Spring Boot</span><span>Spring Security</span><span>JPA/Hibernate</span><span>JavaScript</span><span>SQL</span><span>Node.js</span></div></div>
+      <div class="skill-card reveal"><div class="sh">Distributed systems</div><div class="skill-list"><span>Kafka</span><span>Event-Driven Arch</span><span>Concurrency</span><span>Idempotency</span><span>Backpressure</span><span>Resilience4j</span><span>DLQ</span></div></div>
+      <div class="skill-card reveal"><div class="sh">Frontend</div><div class="skill-list"><span>React</span><span>Next.js</span><span>HTML/CSS</span><span>Responsive UI</span><span>REST & WebSocket</span></div></div>
+      <div class="skill-card reveal"><div class="sh">Data & caching</div><div class="skill-list"><span>PostgreSQL/Aurora</span><span>Redis</span><span>MongoDB</span><span>MySQL</span></div></div>
+      <div class="skill-card reveal"><div class="sh">Cloud & DevOps</div><div class="skill-list"><span>AWS (ECS, S3)</span><span>Docker</span><span>Kubernetes</span><span>CI/CD</span><span>Splunk</span><span>Grafana</span></div></div>
+      <div class="skill-card reveal"><div class="sh">AI-augmented dev</div><div class="skill-list"><span>Gemini/Claude/GPT APIs</span><span>Structured output</span><span>Claude Code</span><span>Cursor</span><span>Copilot</span></div></div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="contact-card reveal">
+      <div class="badge">● Open to relocation · Noida, India → EU</div>
+      <h2>Let's build something reliable.</h2>
+      <p>Open to roles in backend, distributed systems, and product engineering — especially teams in the Netherlands, Germany, Ireland, and the Nordics.</p>
+      <div class="hero-cta" style="justify-content:center">
+        <a href="mailto:bhati.mayank842@gmail.com" class="btn btn-primary">bhati.mayank842@gmail.com</a>
+        <a href="https://linkedin.com/in/mayank-bhati-542000185" target="_blank" rel="noopener" class="btn btn-ghost">LinkedIn</a>
+        <a href="https://github.com/mayank-bhati" target="_blank" rel="noopener" class="btn btn-ghost">GitHub</a>
+      </div>
+    </div>
+    <footer>designed & built by Mayank Bhati · © 2025 · <span class="hl">this page runs on the same principles it describes</span></footer>
+  </section>
+
+</div>
+
+<script src="assets/main.js"></script>
 </body>
 </html>
