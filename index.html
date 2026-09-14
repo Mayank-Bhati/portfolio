@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="description" content="Mayank Bhati — Backend and distributed systems engineer. Java/Spring Boot, Kafka, Redis, Kubernetes. Built roster sync for 6.5M+ users at Adobe. Ships across the stack in React/Next.js. Based in Noida, India." />
+<meta name="description" content="Mayank Bhati — Backend and distributed systems engineer. Java/Spring Boot, Kafka, Redis, Kubernetes. Built roster sync for 6.5M+ users at Adobe. Full-stack delivery at Samsung; frontend working familiarity. Based in Noida, India." />
 <meta property="og:title" content="Mayank Bhati · Distributed Systems Engineer" />
 <meta property="og:description" content="I build event-driven systems that stay correct and fast under real production load." />
 <meta property="og:type" content="website" />
@@ -42,10 +42,11 @@
     <div class="hero-left">
       <div class="status"><span class="live"></span>Open to opportunities · Noida, India</div>
       <h1 class="name">Mayank <span class="grad">Bhati</span></h1>
-      <div class="role"><b>Backend &amp; Distributed Systems Engineer</b> · ships across the stack</div>
-      <p class="tag">I build <b>event-driven systems</b> that stay correct and fast under real production load — and own them end-to-end, from Kafka pipeline to the UI on top.</p>
+      <div class="role"><b>Backend &amp; Distributed Systems Engineer</b> · Java / Spring Boot</div>
+      <p class="tag">I build <b>event-driven systems</b> that stay correct and fast under real production load — with a focus on concurrency, consistency, performance, and fault recovery.</p>
       <div class="hero-cta">
         <a href="#projects" class="btn btn-primary">View work →</a>
+        <a href="assets/Mayank-Bhati-Resume.pdf" class="btn btn-ghost" target="_blank" rel="noopener">Resume PDF</a>
         <a href="mailto:bhati.mayank842@gmail.com" class="btn btn-ghost">Get in touch</a>
         <a href="https://github.com/mayank-bhati" target="_blank" rel="noopener" class="btn btn-ghost">GitHub</a>
       </div>
@@ -62,7 +63,7 @@
       <div class="metric"><div class="n">6.5M+</div><div class="l">users served</div></div>
       <div class="metric"><div class="n">~85%</div><div class="l">sync time cut</div></div>
       <div class="metric"><div class="n">99.99%</div><div class="l">fewer API calls</div></div>
-      <div class="metric"><div class="n">4+ yrs</div><div class="l">in production</div></div>
+      <div class="metric"><div class="n">~4 yrs</div><div class="l">in production</div></div>
     </div>
   </header>
 
@@ -72,9 +73,9 @@
     <h2 class="sec reveal">Systems thinker, first-principles builder.</h2>
     <div class="about-grid">
       <div class="about-body reveal">
-        <p>I'm a <b>backend engineer</b> with <span class="hl">4+ years</span> building high-throughput, event-driven microservices in 24/7 production — across consumer commerce and education platforms.</p>
-        <p>My core strength is reasoning about systems from <b>first principles</b>: concurrency, caching and invalidation, idempotency, backpressure, and resilience. At Adobe I owned a <b>4-service Kafka-driven roster-sync pipeline</b> serving <span class="hl">6.5M+ K-12 users</span>; I've cut worst-case sync time by ~85% and eliminated throttling by redesigning the data flow, not by throwing hardware at it.</p>
-        <p>I care about engineering that quietly makes things better for real people — the pipeline that keeps 6.5 million students' classrooms in sync is invisible when it works, and that's the point. I also ship across the stack in <b>React / Next.js</b>, owning features end-to-end from schema to UI.</p>
+        <p>I'm a <b>backend engineer</b> with <span class="hl">nearly four years at Adobe and Samsung</span> building high-throughput, event-driven microservices in 24/7 production — across consumer commerce and education platforms.</p>
+        <p>My core strength is reasoning about systems from <b>first principles</b>: concurrency, caching and invalidation, idempotency, backpressure, and resilience. At Adobe I owned components of a <b>distributed roster-reconciliation platform</b> serving <span class="hl">6.5M+ K-12 users</span>; I've cut worst-case sync time by ~85% and eliminated throttling by redesigning the data flow, not by throwing hardware at it.</p>
+        <p>I care about engineering that quietly makes things better for real people — the pipeline that keeps 6.5 million students' classrooms in sync is invisible when it works, and that's the point. At Samsung I delivered full-stack features across <b>Java/Spring Boot services and React UI</b>. React and Next.js are working familiarity; backend and distributed systems are my primary specialization.</p>
       </div>
       <div class="principles reveal">
         <div class="h">// how I work</div>
@@ -101,16 +102,16 @@
         </div>
         <div class="node-meta">Education Platform · Roster Sync · Java 17, Spring Boot, Kafka, Redis, PostgreSQL/Aurora</div>
         <ul>
-          <li>Owned a <b>4-service, Kafka-driven roster sync pipeline</b> keeping Adobe Admin Console consistent with Clever & ClassLink for <b>6.5M+ K-12 users</b> at 99.9%+ uptime</li>
+          <li>Owned components of a <b>distributed roster-reconciliation platform</b> keeping Adobe Admin Console consistent with Clever & ClassLink for <b>6.5M+ K-12 users</b> at 99.9%+ uptime</li>
           <li>Cut worst-case sync on a <b>120k+ user district from ~12.5h to ~1h50m (~85%)</b> via bounded-parallel chunked async, Aurora read replicas, and JVM/GC tuning — zero extra infra spend</li>
           <li>Replaced O(N) per-user fetches with <b>bulk /sections aggregation</b> in Redis — <b>~99.99% fewer</b> downstream API calls, killing ClassLink 429 throttling at back-to-school</li>
           <li>Designed a <b>task-based heartbeat with atomic-claim recovery</b> that self-heals syncs after pod crashes; made cache invalidation event-driven to close a drift bug</li>
-          <li>Drove observability across all 4 services with <b>Resilience4j circuit breakers</b>; MTTD &lt; 15 min; resolved <b>150+ Critical/Blocker</b> issues</li>
+          <li>Improved production resilience with <b>circuit breakers, retries, and bounded error payloads</b>; monitored services with Splunk/Grafana, resolved <b>150+ Critical/Blocker</b> issues, and used JUnit 5 and Spring integration testing</li>
         </ul>
       </div>
       <div class="node reveal">
         <div class="node-head">
-          <div><span class="node-role">Software Development Engineer</span> · <span class="node-co">Samsung</span></div>
+          <div><span class="node-role">Software Development Engineer (Full-Stack)</span> · <span class="node-co">Samsung</span></div>
           <div class="node-date">Jul 2022 — Jun 2024</div>
         </div>
         <div class="node-meta">samsung.com/in · E-commerce Backend + React Storefront · Java, Spring Boot, PostgreSQL, Kafka</div>
@@ -146,7 +147,7 @@
         <div class="proj-title">Con<span class="em">fronta</span></div>
         <div class="proj-badge">FOUNDER · LIVE</div>
       </div>
-      <p class="proj-lead">An AI-assisted career-guidance platform that helps students discover study paths that fit who they are — then compare the real institutions behind them.</p>
+      <p class="proj-lead">A career-guidance platform with deterministic client-side scoring that helps students discover study paths that fit who they are — then compare the real institutions behind them.</p>
       <div class="proj-block">
         <div class="bh">The problem</div>
         <p>Italy has one of Europe's highest dropout rates, largely because students pick courses blindly — with no way to match their interests to paths, or to see the reality of a course before enrolling.</p>
@@ -220,7 +221,7 @@
     <div class="proj reveal">
       <div class="proj-head">
         <div class="proj-title"><span class="em">Zorovah</span> — Multi-Tenant School SaaS</div>
-        <div class="proj-badge">FOUNDER</div>
+        <div class="proj-badge">FOUNDER · BACKEND DEVELOPER</div>
       </div>
       <p class="proj-lead">A multi-tenant operations platform for Indian K-12 schools — fee collection, admissions, attendance, and communication in one reliable system instead of fragmented tools.</p>
       <div class="proj-block">
@@ -247,8 +248,9 @@
       <div class="skill-card reveal"><div class="sh">Distributed systems</div><div class="skill-list"><span>Kafka</span><span>Event-Driven Arch</span><span>Concurrency</span><span>Idempotency</span><span>Backpressure</span><span>Resilience4j</span><span>DLQ</span></div></div>
       <div class="skill-card reveal"><div class="sh">Data & caching</div><div class="skill-list"><span>PostgreSQL/Aurora</span><span>Redis</span><span>MongoDB</span><span>MySQL</span></div></div>
       <div class="skill-card reveal"><div class="sh">Cloud & DevOps</div><div class="skill-list"><span>AWS (ECS, S3)</span><span>Docker</span><span>Kubernetes</span><span>CI/CD</span><span>Splunk</span><span>Grafana</span></div></div>
-      <div class="skill-card reveal"><div class="sh">Frontend (ships end-to-end)</div><div class="skill-list"><span>React</span><span>Next.js</span><span>HTML/CSS</span><span>Responsive UI</span><span>REST & WebSocket</span></div></div>
-      <div class="skill-card reveal"><div class="sh">AI-augmented dev</div><div class="skill-list"><span>Gemini/Claude/GPT APIs</span><span>Structured output</span><span>Claude Code</span><span>Cursor</span><span>Copilot</span></div></div>
+      <div class="skill-card reveal"><div class="sh">Frontend · working familiarity</div><div class="skill-list"><span>React</span><span>Next.js</span><span>HTML/CSS</span><span>Responsive UI</span><span>REST & WebSocket</span></div></div>
+      <div class="skill-card reveal"><div class="sh">AI-assisted engineering · hands-on</div><div class="skill-list"><span>Gemini/Claude/GPT APIs</span><span>Structured output</span><span>Claude Code</span><span>Cursor</span><span>GitHub Copilot</span></div><p>Used Claude, GitHub Copilot, and Cursor in day-to-day development at Adobe.</p></div>
+      <div class="skill-card reveal"><div class="sh">AI fundamentals · currently learning</div><div class="skill-list"><span>LLM concepts</span><span>Retrieval-augmented generation (RAG)</span></div><p>Studying how LLMs work and how retrieval supports generation.</p></div>
     </div>
   </section>
 
