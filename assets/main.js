@@ -20,8 +20,9 @@
     { t: "$ initializing runtime", cls: "" },
     { t: "→ loading distributed systems ................ ", tail: "ok", tcls: "ok" },
     { t: "→ establishing event pipeline ............... ", tail: "ok", tcls: "ok" },
+    { t: "→ indexing retrieval corpus ................. ", tail: "ok", tcls: "ok" },
     { t: "→ warming caches ........................... ", tail: "ok", tcls: "ok" },
-    { t: "→ circuit breakers ......................... ", tail: "armed", tcls: "amber" },
+    { t: "→ grounding outputs + citations ............ ", tail: "ready", tcls: "amber" },
     { t: "→ from chaos, order.", cls: "amber" },
   ];
   const bootEl = document.getElementById("boot");

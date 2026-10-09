@@ -161,6 +161,7 @@ h2.sec { font-family: 'Sora', sans-serif; font-weight: 700; font-size: clamp(28p
 .chip:hover { border-color: var(--line-bright); color: var(--ink); }
 .proj-link { display: inline-flex; align-items: center; gap: 7px; margin-top: 18px; font-family: 'JetBrains Mono',monospace; font-size: 13px; color: var(--signal); border-bottom: 1px solid transparent; transition: border-color .2s; }
 .proj-link:hover { border-color: var(--signal); }
+.project-note { margin-top: 16px; color: var(--ink-faint); font-family: 'JetBrains Mono', monospace; font-size: 11.5px; }
 
 /* ---------- SKILLS ---------- */
 .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px,1fr)); gap: 16px; }
