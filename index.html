@@ -4,14 +4,14 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="description" content="Mayank Bhati — Backend and distributed systems engineer. Java/Spring Boot, Kafka, Redis, Kubernetes. Built roster sync for 6.5M+ users at Adobe. Full-stack delivery at Samsung; frontend working familiarity. Based in Noida, India." />
-<meta property="og:title" content="Mayank Bhati · Distributed Systems Engineer" />
-<meta property="og:description" content="I build event-driven systems that stay correct and fast under real production load." />
+<meta name="description" content="Mayank Bhati — Forward Deployed, Backend + AI, and Applied AI Engineer. Ex-Adobe, Ex-Samsung. Built distributed systems serving 6.5M+ users and a RAG-based incident copilot with grounded, cited answers." />
+<meta property="og:title" content="Mayank Bhati · Backend + Applied AI Engineer" />
+<meta property="og:description" content="Ex-Adobe, Ex-Samsung engineer building reliable distributed systems and grounded AI products." />
 <meta property="og:type" content="website" />
-<title>Mayank Bhati · Distributed Systems Engineer</title>
+<title>Mayank Bhati · Backend + Applied AI Engineer</title>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500;700&amp;display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="assets/style.css" />
 </head>
 <body>
@@ -42,8 +42,8 @@
     <div class="hero-left">
       <div class="status"><span class="live"></span>Open to opportunities · Noida, India</div>
       <h1 class="name">Mayank <span class="grad">Bhati</span></h1>
-      <div class="role"><b>Backend &amp; Distributed Systems Engineer</b> · Java / Spring Boot</div>
-      <p class="tag">I build <b>event-driven systems</b> that stay correct and fast under real production load — with a focus on concurrency, consistency, performance, and fault recovery.</p>
+      <div class="role"><b>Backend + Applied AI Engineer</b> · Forward Deployed Engineering</div>
+      <p class="tag"><b>Ex-Adobe · Ex-Samsung.</b> I build production systems that connect hard backend problems with useful AI — from resilient, event-driven services to retrieval pipelines with grounded, cited outputs.</p>
       <div class="hero-cta">
         <a href="#projects" class="btn btn-primary">View work →</a>
         <a href="assets/Mayank-Bhati-Resume.pdf" class="btn btn-ghost" target="_blank" rel="noopener">Resume PDF</a>
@@ -63,19 +63,19 @@
       <div class="metric"><div class="n">6.5M+</div><div class="l">users served</div></div>
       <div class="metric"><div class="n">~85%</div><div class="l">sync time cut</div></div>
       <div class="metric"><div class="n">99.99%</div><div class="l">fewer API calls</div></div>
-      <div class="metric"><div class="n">~4 yrs</div><div class="l">in production</div></div>
+      <div class="metric"><div class="n">10x</div><div class="l">peak order scale</div></div>
     </div>
   </header>
 
   <!-- ABOUT -->
   <section id="about">
     <div class="eyebrow reveal">01 · about</div>
-    <h2 class="sec reveal">Systems thinker, first-principles builder.</h2>
+    <h2 class="sec reveal">Backend depth. Applied AI delivery.</h2>
     <div class="about-grid">
       <div class="about-body reveal">
-        <p>I'm a <b>backend engineer</b> with <span class="hl">nearly four years at Adobe and Samsung</span> building high-throughput, event-driven microservices in 24/7 production — across consumer commerce and education platforms.</p>
-        <p>My core strength is reasoning about systems from <b>first principles</b>: concurrency, caching and invalidation, idempotency, backpressure, and resilience. At Adobe I owned components of a <b>distributed roster-reconciliation platform</b> serving <span class="hl">6.5M+ K-12 users</span>; I've cut worst-case sync time by ~85% and eliminated throttling by redesigning the data flow, not by throwing hardware at it.</p>
-        <p>I care about engineering that quietly makes things better for real people — the pipeline that keeps 6.5 million students' classrooms in sync is invisible when it works, and that's the point. At Samsung I delivered full-stack features across <b>Java/Spring Boot services and React UI</b>. React and Next.js are working familiarity; backend and distributed systems are my primary specialization.</p>
+        <p>I'm an <b>ex-Adobe, ex-Samsung backend engineer</b> who works at the boundary of distributed systems and applied AI. I turn ambiguous operational problems into production-ready software: understand the workflow, find the failure modes, build the integration, and make the result measurable and supportable.</p>
+        <p>At Adobe I owned components of a <b>distributed roster-reconciliation platform</b> serving <span class="hl">6.5M+ K-12 users</span>. I cut worst-case sync time by ~85%, removed a throttling bottleneck by replacing per-user calls with bulk aggregation, and designed heartbeat-based recovery so interrupted work could safely self-heal after pod failures.</p>
+        <p>At Samsung I built high-traffic catalogue and checkout services for samsung.com/in, improving latency by 15–25% and helping the platform absorb order volumes up to 10x during launches and festive sales. I now apply that production mindset to <b>RAG, retrieval, tool use, grounded generation, citations, and LLM evaluation</b> — AI systems whose answers can be traced, tested, and trusted.</p>
       </div>
       <div class="principles reveal">
         <div class="h">// how I work</div>
@@ -84,7 +84,7 @@
           <li><span class="k">idempotent</span> by default — retries must be safe</li>
           <li><span class="k">bounded</span> everything — pools, payloads, blast radius</li>
           <li><span class="k">observable</span> from day one</li>
-          <li><span class="k">derive</span> from scratch — understand, don't memorize</li>
+          <li><span class="k">ground</span> AI outputs in evidence, citations, and evals</li>
         </ul>
       </div>
     </div>
@@ -102,7 +102,7 @@
         </div>
         <div class="node-meta">Education Platform · Roster Sync · Java 17, Spring Boot, Kafka, Redis, PostgreSQL/Aurora</div>
         <ul>
-          <li>Owned components of a <b>distributed roster-reconciliation platform</b> keeping Adobe Admin Console consistent with Clever & ClassLink for <b>6.5M+ K-12 users</b> at 99.9%+ uptime</li>
+          <li>Owned components of <b>RosterSync, a distributed roster-reconciliation platform</b> keeping Adobe Admin Console consistent with Clever &amp; ClassLink for <b>6.5M+ K-12 users</b> at 99.9%+ uptime</li>
           <li>Cut worst-case sync on a <b>120k+ user district from ~12.5h to ~1h50m (~85%)</b> via bounded-parallel chunked async, Aurora read replicas, and JVM/GC tuning — zero extra infra spend</li>
           <li>Replaced O(N) per-user fetches with <b>bulk /sections aggregation</b> in Redis — <b>~99.99% fewer</b> downstream API calls, killing ClassLink 429 throttling at back-to-school</li>
           <li>Designed a <b>task-based heartbeat with atomic-claim recovery</b> that self-heals syncs after pod crashes; made cache invalidation event-driven to close a drift bug</li>
@@ -111,15 +111,16 @@
       </div>
       <div class="node reveal">
         <div class="node-head">
-          <div><span class="node-role">Software Development Engineer (Full-Stack)</span> · <span class="node-co">Samsung</span></div>
+          <div><span class="node-role">Software Development Engineer</span> · <span class="node-co">Samsung</span></div>
           <div class="node-date">Jul 2022 — Jun 2024</div>
         </div>
-        <div class="node-meta">samsung.com/in · E-commerce Backend + React Storefront · Java, Spring Boot, PostgreSQL, Kafka</div>
+        <div class="node-meta">samsung.com/in · Catalogue &amp; Checkout Platform · Java, Spring Boot, PostgreSQL, Kafka, Redis</div>
         <ul>
-          <li>Built <b>catalogue & checkout services</b> sustaining <b>millions of daily requests</b> with order volume scaling <b>10x</b> during Galaxy launches and festive sales</li>
-          <li>Delivered <b>customer-facing storefront features on the React frontend</b> — responsive product & checkout UI in React/JavaScript, owning flows end-to-end from API contract to page</li>
-          <li>Engineered <b>surge handling</b> with bounded thread pools and Kafka load-leveling, with transparent queue-position feedback under peak load</li>
-          <li>Reduced <b>REST API latency 15–25%</b> via query-plan analysis, index tuning, N+1 elimination, and Redis caching on the hot path</li>
+          <li>Built and operated high-traffic <b>catalogue and checkout services</b> supporting <b>millions of daily requests</b> at 99.9%+ uptime</li>
+          <li>Designed <b>surge handling</b> with bounded thread pools and Kafka-based load leveling, helping services absorb order volumes up to <b>10x</b> during Galaxy launches and festive sales</li>
+          <li>Reduced <b>REST API latency by 15–25%</b> through query-plan analysis, composite indexing, N+1 elimination, and targeted Redis caching</li>
+          <li>Improved checkout resilience with <b>idempotency keys, retry-safe APIs, circuit breakers, and defensive error handling</b>; led SIT/UAT for critical releases and supported production debugging</li>
+          <li>Delivered React components and API integrations when needed, while primarily owning backend services, performance, and distributed-system concerns</li>
         </ul>
       </div>
       <div class="node dim reveal">
@@ -139,7 +140,42 @@
   <!-- PROJECTS -->
   <section id="projects">
     <div class="eyebrow reveal">03 · projects</div>
-    <h2 class="sec reveal">Things I've built end-to-end.</h2>
+    <h2 class="sec reveal">Systems I've taken from problem to working software.</h2>
+
+    <!-- RosterSync Incident Copilot -->
+    <div class="proj reveal">
+      <div class="proj-head">
+        <div class="proj-title"><span class="em">RosterSync Incident Copilot</span></div>
+        <div class="proj-badge">PERSONAL · APPLIED AI</div>
+      </div>
+      <p class="proj-lead">A RAG-based incident-response copilot that turns runbooks, architecture notes, and sanitized incident scenarios into grounded troubleshooting guidance with traceable sources.</p>
+      <div class="proj-block">
+        <div class="bh">Retrieval pipeline</div>
+        <div class="flow">
+          <span class="stage">Query</span><span class="arr">→</span>
+          <span class="stage">Hybrid Retrieval</span><span class="arr">→</span>
+          <span class="stage">Reranking</span><span class="arr">→</span>
+          <span class="stage">Tool Calls</span><span class="arr">→</span>
+          <span class="stage">Grounded Answer + Citations</span>
+        </div>
+      </div>
+      <div class="proj-block">
+        <div class="bh">Engineering detail</div>
+        <ul>
+          <li>Built an ingestion pipeline that chunks operational documents, generates <b>embeddings</b>, and indexes content for <b>semantic vector search</b></li>
+          <li>Combined dense vector retrieval with lexical search, then <b>reranked hybrid candidates</b> so exact identifiers and semantically related failure patterns both remain discoverable</li>
+          <li>Added <b>tool-based retrieval</b> so the model can request targeted evidence for sync state, failure modes, and recovery procedures instead of relying on prompt context alone</li>
+          <li>Constrained answers to retrieved evidence, returning <b>inline citations, source metadata, and explicit uncertainty</b> when the corpus cannot support a conclusion</li>
+          <li>Created an <b>LLM evaluation</b> set for retrieval relevance, groundedness, citation correctness, and answer usefulness across representative incident scenarios</li>
+        </ul>
+      </div>
+      <div class="stack">
+        <span class="chip">RAG</span><span class="chip">Embeddings</span><span class="chip">Vector Search</span>
+        <span class="chip">Hybrid Retrieval</span><span class="chip">Reranking</span><span class="chip">Tool Calling</span>
+        <span class="chip">Grounded Generation</span><span class="chip">Citations</span><span class="chip">LLM Evaluation</span>
+      </div>
+      <p class="project-note">Personal prototype built with sanitized, non-proprietary material; not an Adobe production system.</p>
+    </div>
 
     <!-- Confronta -->
     <div class="proj reveal">
@@ -244,12 +280,13 @@
     <div class="eyebrow reveal">04 · skills</div>
     <h2 class="sec reveal">The stack, honestly weighted.</h2>
     <div class="skills-grid">
-      <div class="skill-card reveal"><div class="sh">Backend & languages</div><div class="skill-list"><span>Java 17/21</span><span>Spring Boot</span><span>Spring Security</span><span>JPA/Hibernate</span><span>JavaScript</span><span>SQL</span></div></div>
-      <div class="skill-card reveal"><div class="sh">Distributed systems</div><div class="skill-list"><span>Kafka</span><span>Event-Driven Arch</span><span>Concurrency</span><span>Idempotency</span><span>Backpressure</span><span>Resilience4j</span><span>DLQ</span></div></div>
-      <div class="skill-card reveal"><div class="sh">Data & caching</div><div class="skill-list"><span>PostgreSQL/Aurora</span><span>Redis</span><span>MongoDB</span><span>MySQL</span></div></div>
-      <div class="skill-card reveal"><div class="sh">Cloud & DevOps</div><div class="skill-list"><span>AWS (ECS, S3)</span><span>Docker</span><span>Kubernetes</span><span>CI/CD</span><span>Splunk</span><span>Grafana</span></div></div>
-      <div class="skill-card reveal"><div class="sh">Frontend · working familiarity</div><div class="skill-list"><span>React</span><span>Next.js</span><span>HTML/CSS</span><span>Responsive UI</span><span>REST & WebSocket</span></div></div>
-      <div class="skill-card reveal"><div class="sh">AI-assisted engineering · hands-on</div><div class="skill-list"><span>Gemini/Claude/GPT APIs</span><span>Structured output</span><span>Claude Code</span><span>Cursor</span><span>GitHub Copilot</span></div><p>Used Claude, GitHub Copilot, and Cursor in day-to-day development at Adobe.</p></div>
+      <div class="skill-card reveal"><div class="sh">Backend &amp; languages</div><div class="skill-list"><span>Java 17/21</span><span>Spring Boot</span><span>Spring Security</span><span>JPA/Hibernate</span><span>JavaScript</span><span>SQL</span></div></div>
+      <div class="skill-card reveal"><div class="sh">Distributed systems</div><div class="skill-list"><span>Kafka</span><span>Event-Driven Architecture</span><span>Concurrency</span><span>Idempotency</span><span>Backpressure</span><span>Heartbeats &amp; Recovery</span><span>Resilience4j</span></div></div>
+      <div class="skill-card reveal"><div class="sh">Applied AI &amp; retrieval</div><div class="skill-list"><span>RAG</span><span>LLM APIs</span><span>Embeddings</span><span>Vector Search</span><span>Hybrid Retrieval</span><span>Reranking</span><span>Tool Calling</span><span>Prompt Engineering</span></div></div>
+      <div class="skill-card reveal"><div class="sh">AI quality &amp; safety</div><div class="skill-list"><span>Grounded Outputs</span><span>Citations</span><span>LLM Evaluation</span><span>Retrieval Evaluation</span><span>Structured Output</span><span>Human-in-the-loop</span></div></div>
+      <div class="skill-card reveal"><div class="sh">Data &amp; caching</div><div class="skill-list"><span>PostgreSQL/Aurora</span><span>Redis</span><span>MongoDB</span><span>MySQL</span></div></div>
+      <div class="skill-card reveal"><div class="sh">Cloud &amp; DevOps</div><div class="skill-list"><span>AWS (ECS, S3)</span><span>Docker</span><span>Kubernetes</span><span>CI/CD</span><span>Splunk</span><span>Grafana</span></div></div>
+      <div class="skill-card reveal"><div class="sh">Frontend · working familiarity</div><div class="skill-list"><span>React</span><span>Next.js</span><span>HTML/CSS</span><span>Responsive UI</span><span>REST &amp; WebSocket</span></div></div>
     </div>
   </section>
 
@@ -257,15 +294,15 @@
   <section id="contact">
     <div class="contact-card reveal">
       <div class="badge">● Open to opportunities · Noida, India</div>
-      <h2>Let's build something reliable.</h2>
-      <p>Open to backend, distributed systems, and platform engineering roles across India — Bengaluru, Hyderabad, Gurugram, Pune and Mumbai. Happy to relocate.</p>
+      <h2>Let's solve a hard problem.</h2>
+      <p>Open to Forward Deployed Engineer, Backend + AI, Applied AI, and Backend Engineer roles. Based in Noida and open to relocating across India.</p>
       <div class="hero-cta" style="justify-content:center">
         <a href="mailto:bhati.mayank842@gmail.com" class="btn btn-primary">bhati.mayank842@gmail.com</a>
         <a href="https://linkedin.com/in/mayank-bhati-542000185" target="_blank" rel="noopener" class="btn btn-ghost">LinkedIn</a>
         <a href="https://github.com/mayank-bhati" target="_blank" rel="noopener" class="btn btn-ghost">GitHub</a>
       </div>
     </div>
-    <footer>designed & built by Mayank Bhati · © 2026 · <span class="hl">this page runs on the same principles it describes</span></footer>
+    <footer>designed &amp; built by Mayank Bhati · © 2026 · <span class="hl">this page runs on the same principles it describes</span></footer>
   </section>
 
 </div>
