@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="description" content="Mayank Bhati — Forward Deployed, Backend + AI, and Applied AI Engineer. Ex-Adobe, Ex-Samsung. Built distributed systems serving 6.5M+ users and an internal Adobe RAG incident copilot with grounded, cited answers." />
+<meta name="description" content="Mayank Bhati — Forward Deployed, Backend + AI, and Applied AI Engineer. Ex-Adobe, Ex-Samsung. Built distributed systems serving 6.5M+ users and a production Adobe RAG incident copilot with grounded, cited answers." />
 <meta property="og:title" content="Mayank Bhati · Backend + Applied AI Engineer" />
 <meta property="og:description" content="Ex-Adobe, Ex-Samsung engineer building reliable distributed systems and grounded AI products." />
 <meta property="og:type" content="website" />
@@ -46,7 +46,7 @@
       <p class="tag"><b>Ex-Adobe · Ex-Samsung.</b> I build production systems that connect hard backend problems with useful AI — from resilient, event-driven services to retrieval pipelines with grounded, cited outputs.</p>
       <div class="hero-cta">
         <a href="#projects" class="btn btn-primary">View work →</a>
-        <a href="assets/Mayank-Bhati-Resume.pdf" class="btn btn-ghost" download="Mayank-Bhati-Resume.pdf">Resume PDF</a>
+        <a href="assets/Mayank-Bhati-Resume.pdf" class="btn btn-ghost" target="_blank" rel="noopener">Resume PDF</a>
         <a href="mailto:bhati.mayank842@gmail.com" class="btn btn-ghost">Get in touch</a>
         <a href="https://github.com/mayank-bhati" target="_blank" rel="noopener" class="btn btn-ghost">GitHub</a>
       </div>
@@ -75,7 +75,7 @@
       <div class="about-body reveal">
         <p>I'm an <b>ex-Adobe, ex-Samsung backend engineer</b> who works at the boundary of distributed systems and applied AI. I turn ambiguous operational problems into production-ready software: understand the workflow, find the failure modes, build the integration, and make the result measurable and supportable.</p>
         <p>At Adobe I owned components of a <b>distributed roster-reconciliation platform</b> serving <span class="hl">6.5M+ K-12 users</span>. I cut worst-case sync time by ~85%, removed a throttling bottleneck by replacing per-user calls with bulk aggregation, and designed heartbeat-based recovery so interrupted work could safely self-heal after pod failures.</p>
-        <p>At Adobe I also built the <b>RosterSync Incident Copilot</b>, an internal hackathon prototype combining live operational evidence with retrieved engineering knowledge. It applied <b>RAG, hybrid retrieval, reranking, tool-based retrieval, grounded generation, citations, and LLM evaluation</b> to incident investigation. At Samsung I built high-traffic catalogue and checkout services for samsung.com/in, improving latency by 15–25% and helping the platform absorb order volumes up to 10x during launches and festive sales.</p>
+        <p>At Adobe I also built and deployed the <b>RosterSync Incident Copilot</b>, a production incident-investigation product combining live operational evidence with retrieved engineering knowledge. It applied <b>RAG, hybrid retrieval, reranking, tool-based retrieval, grounded generation, citations, and LLM evaluation</b> to incident investigation. At Samsung I built high-traffic catalogue and checkout services for samsung.com/in, improving latency by 15–25% and helping the platform absorb order volumes up to 10x during launches and festive sales.</p>
       </div>
       <div class="principles reveal">
         <div class="h">// how I work</div>
@@ -107,7 +107,7 @@
           <li>Replaced O(N) per-user fetches with <b>bulk /sections aggregation</b> in Redis — <b>~99.99% fewer</b> downstream API calls, killing ClassLink 429 throttling at back-to-school</li>
           <li>Designed a <b>task-based heartbeat with atomic-claim recovery</b> that self-heals syncs after pod crashes; made cache invalidation event-driven to close a drift bug</li>
           <li>Improved production resilience with <b>circuit breakers, retries, and bounded error payloads</b>; monitored services with Splunk/Grafana, resolved <b>150+ Critical/Blocker</b> issues, and used JUnit 5 and Spring integration testing</li>
-          <li>Built the <b>RosterSync Incident Copilot</b> as an internal Adobe hackathon prototype, combining live sync state and logs/metrics with runbooks, architecture documentation, error guides, and historical incidents to produce grounded diagnoses with citations</li>
+          <li>Built and deployed the <b>RosterSync Incident Copilot</b> as an Adobe production product, combining live sync state and logs/metrics with runbooks, architecture documentation, error guides, and historical incidents to produce grounded diagnoses with citations</li>
           <li>Designed separate retrieval paths for live operational tools and stable engineering knowledge, using <b>embeddings, vector search, hybrid semantic + keyword retrieval, metadata/ACL filtering, and reranking</b></li>
           <li>Added <b>LLM evaluation and safety guardrails</b> for retrieval recall, groundedness, citation precision, latency, graceful degradation, tenant-aware filtering, and explicit separation of evidence from model inference</li>
         </ul>
