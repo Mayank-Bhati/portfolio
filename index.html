@@ -145,6 +145,73 @@
     <div class="eyebrow reveal">03 · projects</div>
     <h2 class="sec reveal">Systems I've taken from problem to working software.</h2>
 
+    <!-- RosterSync Incident Copilot -->
+    <div class="proj reveal">
+      <div class="proj-head">
+        <div class="proj-title"><span class="em">RosterSync</span> Incident Copilot</div>
+        <div class="proj-badge">ADOBE · IN PRODUCTION</div>
+      </div>
+      <p class="proj-lead">An agentic AI copilot that investigates production incidents: the LLM decides which live tools to call, gathers the evidence, and returns a grounded diagnosis with citations. Started as a hackathon idea, then built and deployed as owner of the RosterSync service and used by the team on real incidents.</p>
+      <div class="proj-block">
+        <div class="bh">Agent loop</div>
+        <div class="flow">
+          <span class="stage">Incident question</span><span class="arr">→</span>
+          <span class="stage">Agent picks tools</span><span class="arr">→</span>
+          <span class="stage">Sync state · logs · metrics</span><span class="arr">→</span>
+          <span class="stage">Runbooks · past incidents</span><span class="arr">→</span>
+          <span class="stage">Cited diagnosis</span>
+        </div>
+      </div>
+      <div class="proj-block">
+        <div class="bh">How it works</div>
+        <ul>
+          <li><b>LLM tool calling</b>: the agent chooses which operational tools to query (live sync state, logs, metrics) based on the incident in front of it</li>
+          <li><b>Separate retrieval paths</b> for live operational evidence and stable engineering knowledge (runbooks, architecture docs, error guides, historical incidents)</li>
+          <li><b>Embeddings, vector search, hybrid semantic + keyword retrieval, metadata/ACL filtering and reranking</b> to find the right knowledge</li>
+          <li><b>LLM evaluation and guardrails</b> for retrieval recall, groundedness, citation precision and latency, with tenant-aware filtering, graceful degradation and explicit separation of evidence from model inference</li>
+        </ul>
+      </div>
+      <div class="stack">
+        <span class="chip">Spring Boot</span><span class="chip">LLM APIs</span><span class="chip">Tool Calling</span><span class="chip">Agentic AI</span>
+        <span class="chip">RAG</span><span class="chip">Hybrid Retrieval</span><span class="chip">Reranking</span><span class="chip">LLM Evaluation</span>
+      </div>
+    </div>
+
+    <!-- Atlas Tender -->
+    <div class="proj reveal">
+      <div class="proj-head">
+        <div class="proj-title"><span class="em">Atlas</span> Tender — AI Eligibility Checker</div>
+        <div class="proj-badge">EARLY-STAGE STARTUP · SEEKING PILOTS</div>
+      </div>
+      <p class="proj-lead">An AI product, built with a partner, that reads government and PSU tender documents alongside a company's own papers and checks every eligibility condition, with page-level proof.</p>
+      <div class="proj-block">
+        <div class="bh">The problem</div>
+        <p>For contractors bidding on tenders, matching eligibility clauses against company documents takes days of back-and-forth, and a single missed clause or fixable gap can get a bid rejected.</p>
+      </div>
+      <div class="proj-block">
+        <div class="bh">Eligibility workflow</div>
+        <div class="flow">
+          <span class="stage">Tender + company docs</span><span class="arr">→</span>
+          <span class="stage">Agent checks conditions</span><span class="arr">→</span>
+          <span class="stage">Breakdown with proof</span><span class="arr">→</span>
+          <span class="stage">Human review</span>
+        </div>
+      </div>
+      <div class="proj-block">
+        <div class="bh">What I built</div>
+        <ul>
+          <li>The <b>backend, AI pipeline and front end</b>, using <b>LLM tool calling</b> to work through each eligibility condition</li>
+          <li>A clear breakdown for every tender: <b>conditions met, missing documents (and what's needed), fixable gaps (and how to fix them), and definite blockers</b>, each with page-level proof</li>
+          <li><b>Human-in-the-loop by design</b>: the bid team stays in control and makes the final call</li>
+          <li>Working <b>directly with contractors</b> on customer discovery and pilot outreach</li>
+        </ul>
+      </div>
+      <div class="stack">
+        <span class="chip">Agentic AI</span><span class="chip">LLM Tool Calling</span><span class="chip">Document Understanding</span>
+        <span class="chip">Full-Stack</span><span class="chip">Human-in-the-Loop</span>
+      </div>
+    </div>
+
     <!-- Confronta -->
     <div class="proj reveal">
       <div class="proj-head">
