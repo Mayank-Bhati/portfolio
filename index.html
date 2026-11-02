@@ -74,8 +74,8 @@
     <div class="about-grid">
       <div class="about-body reveal">
         <p>I'm an <b>ex-Adobe, ex-Samsung backend engineer</b> who works at the boundary of distributed systems and applied AI. I turn ambiguous operational problems into production-ready software: understand the workflow, find the failure modes, build the integration, and make the result measurable and supportable.</p>
-        <p>At Adobe I owned components of a <b>distributed roster-reconciliation platform</b> serving <span class="hl">6.5M+ K-12 users</span>. I cut worst-case sync time by ~85%, removed a throttling bottleneck by replacing per-user calls with bulk aggregation, and designed heartbeat-based recovery so interrupted work could safely self-heal after pod failures.</p>
-        <p>At Adobe I also built and deployed the <b>RosterSync Incident Copilot</b>, a production incident-investigation product combining live operational evidence with retrieved engineering knowledge. It applied <b>RAG, hybrid retrieval, reranking, tool-based retrieval, grounded generation, citations, and LLM evaluation</b> to incident investigation. At Samsung I built high-traffic catalogue and checkout services for samsung.com/in, improving latency by 15–25% and helping the platform absorb order volumes up to 10x during launches and festive sales.</p>
+        <p>At Adobe I owned the end-to-end roster sync pipeline: a <b>distributed roster-reconciliation platform</b> of four Kafka-connected services serving <span class="hl">6.5M+ K-12 users</span>. I cut worst-case sync time by ~85%, removed a throttling bottleneck by replacing per-user calls with bulk aggregation, and designed heartbeat-based recovery so interrupted work could safely self-heal after pod failures.</p>
+        <p>At Adobe I also built and deployed the <b>RosterSync Incident Copilot</b>, a production incident-investigation product combining live operational evidence with retrieved engineering knowledge. It applied <b>RAG, hybrid retrieval, reranking, tool-based retrieval, grounded generation, citations, and LLM evaluation</b> to incident investigation. At Samsung I maintained and extended high-traffic catalogue and checkout services for samsung.com/in, shipping new features, improving latency by 15–25% and helping the platform absorb order volumes up to 10x during launches and festive sales.</p>
       </div>
       <div class="principles reveal">
         <div class="h">// how I work</div>
@@ -102,7 +102,7 @@
         </div>
         <div class="node-meta">Education Platform · Roster Sync · Java 17, Spring Boot, Kafka, Redis, PostgreSQL/Aurora</div>
         <ul>
-          <li>Owned components of <b>RosterSync, a distributed roster-reconciliation platform</b> keeping Adobe Admin Console consistent with Clever &amp; ClassLink for <b>6.5M+ K-12 users</b> at 99.9%+ uptime</li>
+          <li>Owned the end-to-end <b>RosterSync pipeline</b>: four Kafka-connected services forming a distributed roster-reconciliation platform, keeping Adobe Admin Console consistent with Clever &amp; ClassLink for <b>6.5M+ K-12 users</b> at 99.9%+ uptime</li>
           <li>Cut worst-case sync on a <b>120k+ user district from ~12.5h to ~1h50m (~85%)</b> via bounded-parallel chunked async, Aurora read replicas, and JVM/GC tuning — zero extra infra spend</li>
           <li>Replaced O(N) per-user fetches with <b>bulk /sections aggregation</b> in Redis — <b>~99.99% fewer</b> downstream API calls, killing ClassLink 429 throttling at back-to-school</li>
           <li>Designed a <b>task-based heartbeat with atomic-claim recovery</b> that self-heals syncs after pod crashes; made cache invalidation event-driven to close a drift bug</li>
@@ -115,12 +115,12 @@
       <div class="node reveal">
         <div class="node-head">
           <div><span class="node-role">Software Development Engineer</span> · <span class="node-co">Samsung</span></div>
-          <div class="node-date">Jul 2022 — Jun 2024</div>
+          <div class="node-date">Jul 2022 — May 2024</div>
         </div>
         <div class="node-meta">samsung.com/in · Catalogue &amp; Checkout Platform · Java, Spring Boot, PostgreSQL, Kafka, Redis</div>
         <ul>
-          <li>Built and operated high-traffic <b>catalogue and checkout services</b> supporting <b>millions of daily requests</b> at 99.9%+ uptime</li>
-          <li>Designed <b>surge handling</b> with bounded thread pools and Kafka-based load leveling, helping services absorb order volumes up to <b>10x</b> during Galaxy launches and festive sales</li>
+          <li>Maintained and extended high-traffic <b>catalogue and checkout services</b>, shipping new features, supporting <b>millions of daily requests</b> at 99.9%+ uptime</li>
+          <li>Worked on <b>surge handling</b> with bounded thread pools and Kafka-based load leveling, helping services absorb order volumes up to <b>10x</b> during Galaxy launches and festive sales</li>
           <li>Reduced <b>REST API latency by 15–25%</b> through query-plan analysis, composite indexing, N+1 elimination, and targeted Redis caching</li>
           <li>Improved checkout resilience with <b>idempotency keys, retry-safe APIs, circuit breakers, and defensive error handling</b>; led SIT/UAT for critical releases and supported production debugging</li>
           <li>Delivered React components and API integrations when needed, while primarily owning backend services, performance, and distributed-system concerns</li>
